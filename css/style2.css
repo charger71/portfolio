@@ -1,0 +1,370 @@
+/* Base CSS for a modern website */
+
+/* Colors
+
+Drama Red: #1c162e #3c162e #5c162e #7c162e #9c162
+
+*/
+
+.clrset-dramared {
+    color: #1c162e;
+    color: #3c162e;
+    color: #5c162e;
+    color: #7c162e;
+    color: #9c162e;
+
+}
+
+/* Imports */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+
+
+/* Reset and Normalize */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%; /* 16px by default */
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a, button {
+    background-color: transparent;
+    text-decoration: none;
+    color: #007bff;
+    outline: 0;
+}
+
+a:hover, button:hover {
+    text-decoration: underline;
+}
+
+/* Layout */
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    body {
+        display: grid;
+        grid-template-columns: auto 20vw;
+    }
+
+    .sidebar {
+        position: fixed;
+        right: 0;
+        height: 100vh;
+        width: 20vw;
+        background: #1c162e;
+        color: #efefef;
+      }
+      .main {
+        grid-column-start: 1;
+        background: #efefef;
+      }
+      .proj-nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        /* justify-content: space-between;
+        padding: 0.5rem;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.8); */
+      }
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    margin: 0.67em 0;
+}
+
+h2 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Forms */
+input,
+button,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+    overflow: visible;
+}
+
+button:hover {
+
+}
+
+button,
+select { 
+  text-transform: none;
+}
+
+button,
+html [type="button"], 
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; 
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,b
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box; 
+  color: inherit; 
+  display: table; 
+  max-width: 100%; 
+  padding: 0; 
+  white-space: normal; 
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; 
+  padding: 0; 
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+
+
+
+/* Utility classes */
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mt-5 { margin-top: 3rem; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-5 { margin-bottom: 3rem; }
+
+.pt-0 { padding-top: 0; }
+.pt-1 { padding-top: 0.25rem; }
+.pt-2 { padding-top: 0.5rem; }
+.pt-3 { padding-top: 1rem; }
+.pt-4 { padding-top: 1.5rem; }
+.pt-5 { padding-top: 3rem; }
+
+.pb-0 { padding-bottom: 0; }
+.pb-1 { padding-bottom: 0.25rem; }
+.pb-2 { padding-bottom: 0.5rem; }
+.pb-3 { padding-bottom: 1rem; }
+.pb-4 { padding-bottom: 1.5rem; }
+.pb-5 { padding-bottom: 3rem; }
+
+/* Flex utilities */
+.d-flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+/* Misc fixes */
+
+details {
+    display: block;
+  }
+  
+  summary {
+    display: list-item;
+  }
+
+  template {
+    display: none;
+  }
+  
+  [hidden] {
+    display: none;
+  }
+
+/* Custom */
+
+.tabcontent { display: none; }
+
+.proj-nav-lnk.active { font-weight: bold; }
+
+.tab-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border: none;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    text-align: center;
+    line-height: normal;
+}
+
+.tab-button:hover {
+    background-color: #ddd;
+}
+
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.mason-cont {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+}
+
+@media (min-width: 768px) {
+
+    .mason-cont {
+        display: flex;
+        flex-flow: column wrap;
+        align-content: space-between;
+        height: 4600px;
+    }
+
+}

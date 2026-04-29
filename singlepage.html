@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Don Hansen — Design Technologist Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+
+<style>
+  /* Reset & base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body, html {
+    margin: 0;
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.5;
+    min-height: 100vh;
+  }
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+  a:hover, a:focus {
+    color: var(--color-highlight);
+    outline: none;
+  }
+  button {
+    font-family: var(--font-primary);
+    background: none;
+    border: none;
+    color: var(--color-accent);
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  button:hover, button:focus {
+    color: var(--color-highlight);
+    outline: none;
+  }
+  h1, h2, h3 {
+    font-family: var(--font-secondary);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /* CSS Variables for fonts & spacing */
+  :root {
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Alumni Sans', sans-serif;
+    --spacing: 1rem;
+    --max-width: 1024px;
+
+    /* Default Palette 1 - Calm Blue Light */
+    --color-bg: #1A1D29;
+    --color-text: #FFFFFF;
+    --color-accent: #6C7293;
+    --color-highlight: #F39C12;
+  }
+
+  /* Palettes */
+  .palette-1 {
+    --color-bg: #F1F1F1;
+    --color-text: #0D1117;
+    --color-accent: #6C7293;
+    --color-highlight: #B8BCC8;
+  }
+  .palette-2 {
+    --color-bg: #F0F6FC;
+    --color-text: #0D1117;
+    --color-accent: #8B949E;
+    --color-highlight: #10B981;
+  }
+  .palette-3 {
+    --color-bg: #f3faf7;
+    --color-text: #204230;
+    --color-accent: #45a369;
+    --color-highlight: #87c99b;
+  }
+  .palette-4 {
+    --color-bg: #f5f3fa;
+    --color-text: #352e45;
+    --color-accent: #7a5ea6;
+    --color-highlight: #b39ddb;
+  }
+
+  /* Dark mode overrides */
+  .dark.palette-1 {
+    --color-bg: #1A1D29;
+    --color-text: #FFFFFF;
+    --color-accent: #6C7293;
+    --color-highlight: #B8BCC8;
+  }
+  .dark.palette-2 {
+    --color-bg: #0D1117;
+    --color-text: #F0F6FC; 
+    --color-accent: #8B949E;
+    --color-highlight: #10B981;
+  }
+  .dark.palette-3 {
+    --color-bg: #1b2a24;
+    --color-text: #cce4cd;
+    --color-accent: #7fd59d;
+    --color-highlight: #a6d8af;
+  }
+  .dark.palette-4 {
+    --color-bg: #2a2435;
+    --color-text: #ded9f0;
+    --color-accent: #b399e2;
+    --color-highlight: #d4c7f0;
+  }
+
+  /* Layout */
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  header.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-highlight);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem var(--spacing);
+    z-index: 1000;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+  .header__name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    flex: 1 1 auto;
+    color: var(--color-text);
+  }
+  .header__contact {
+    font-size: 0.875rem;
+    flex: 2 1 auto;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .header__contact a {
+    color: var(--color-accent);
+  }
+  .header__contact a:hover,
+  .header__contact a:focus {
+    color: var(--color-highlight);
+  }
+  .header-controls {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  .dark-toggle {
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid var(--color-accent);
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  .dark-toggle:hover,
+  .dark-toggle:focus {
+    background-color: var(--color-highlight);
+    color: var(--color-bg);
+    outline: none;
+  }
+  label.palette-switcher-label {
+    font-size: 0.875rem;
+    color: var(--color-text);
+    margin-right: 0.25rem;
+  }
+  select#palette-select {
+    font-size: 0.9rem;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--color-accent);
+    border-radius: 0.25rem;
+    background: transparent;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  select#palette-select:hover,
+  select#palette-select:focus {
+    background-color: var(--color-highlight);
+    color: var(--color-bg);
+    outline: none;
+  }
+
+  /* Navigation styles */
+  nav.nav {
+    margin-top: 4.5rem; /* header height + margin */
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-highlight);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    position: sticky;
+    top: 3.75rem;
+    z-index: 900;
+  }
+  .nav__button {
+    background: var(--color-bg);
+    border-radius: 9999px;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-accent);
+    font-weight: 600;
+    color: var(--color-accent);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .nav__button[aria-selected="true"] {
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    cursor: default;
+  }
+  .nav__button:hover:not([aria-selected="true"]),
+  .nav__button:focus:not([aria-selected="true"]) {
+    background-color: var(--color-highlight);
+    color: var(--color-bg);
+    outline: none;
+  }
+
+  /* Content */
+  main.content {
+    flex: 1 0 auto;
+    max-width: var(--max-width);
+    margin: 1rem auto 3rem;
+    padding: 0 var(--spacing);
+  }
+  .section {
+    display: none;
+  }
+  .section--active {
+    display: block;
+  }
+
+  /* Resume styles */
+  .resume__section {
+    margin-bottom: 2rem;
+  }
+  .resume__section-title {
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 0.25rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  .resume__list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  .resume__list li {
+    margin-bottom: 0.5rem;
+  }
+  .resume__job-title {
+    font-weight: 700;
+  }
+  .resume__job-company {
+    font-style: italic;
+    margin-left: 0.25rem;
+  }
+  .resume__job-dates {
+    float: right;
+    font-size: 0.875rem;
+    color: var(--color-highlight);
+  }
+  .resume__job-description {
+    margin-top: 0.25rem;
+  }
+
+  /* Portfolio grid */
+  .portfolio__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+  .portfolio__item {
+    border: 1px solid var(--color-highlight);
+    border-radius: 6px;
+    padding: 1rem;
+    background: var(--color-bg);
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+  }
+  .portfolio__item:hover,
+  .portfolio__item:focus-within {
+    box-shadow: 0 0 10px var(--color-accent);
+    outline: none;
+  }
+  .portfolio__title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  .portfolio__desc {
+    margin-bottom: 1rem;
+  }
+  .portfolio__link {
+    font-weight: 600;
+  }
+
+  /* Case study */
+  .case-study__header {
+    margin-bottom: 1rem;
+  }
+  .case-study__title {
+    margin-bottom: 0.25rem;
+  }
+  .case-study__summary {
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+  .case-study__dropdown {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+  .case-study__images {
+    display: grid;
+    gap: 1rem;
+  }
+  /* Thumbnail size variations */
+  .case-study__images--small {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+  .case-study__images--medium {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+  .case-study__images--large {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .case-study__images--xlarge {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .case-study__image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  .case-study__image:focus,
+  .case-study__image:hover {
+    outline: none;
+    border-color: var(--color-accent);
+  }
+
+  /* Accordion */
+  .accordion__button {
+    background: var(--color-bg);
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+    padding: 0.5rem 1rem;
+    width: 100%;
+    text-align: left;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 0.75rem;
+    transition: background-color 0.3s ease;
+  }
+  .accordion__button[aria-expanded="true"] {
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    border-radius: 6px 6px 0 0;
+  }
+  .accordion__button:hover,
+  .accordion__button:focus {
+    background-color: var(--color-highlight);
+    color: var(--color-bg);
+    outline: none;
+  }
+  .accordion__panel {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-highlight);
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+    margin-bottom: 0.5rem;
+    background: var(--color-bg);
+  }
+
+  /* Lightbox modal */
+  .lightbox {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1500;
+  }
+  .lightbox--active {
+    visibility: visible;
+    opacity: 1;
+  }
+  .lightbox__content {
+    max-width: 90vw;
+    max-height: 80vh;
+    position: relative;
+  }
+  .lightbox__image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 6px;
+  }
+  .lightbox__btn {
+    position: absolute;
+    background: var(--color-bg);
+    border: none;
+    color: var(--color-accent);
+    font-size: 2rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+  }
+  .lightbox__btn:hover,
+  .lightbox__btn:focus {
+    background-color: var(--color-highlight);
+    color: var(--color-bg);
+    outline: none;
+  }
+  .lightbox__btn--close {
+    top: 1rem;
+    right: 1rem;
+  }
+  .lightbox__btn--prev {
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+  }
+  .lightbox__btn--next {
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+  }
+
+  /* Responsive nav layouts */
+  /* Mobile bottom nav */
+  @media (max-width: 599px) {
+    nav.nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--color-bg);
+      border-top: 1px solid var(--color-highlight);
+      justify-content: space-around;
+      padding: 0.5rem 0;
+      margin-top: 0;
+      top: auto;
+      z-index: 1100;
+    }
+  }
+
+  /* Tablet and smaller desktops: floating pill nav */
+  @media (min-width: 600px) and (max-width: 1439px) {
+    nav.nav {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      width: auto;
+      max-width: 90vw;
+      gap: 1rem;
+      margin-top: 0;
+      top: auto;
+      z-index: 1100;
+    }
+  }
+
+  /* Large desktops: centered top nav */
+  @media (min-width: 1440px) {
+    nav.nav {
+      position: sticky;
+      top: 3.75rem; /* below header */
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      max-width: var(--max-width);
+      padding: 0.5rem 0;
+      border-radius: 0;
+      box-shadow: none;
+      transform: none;
+      justify-content: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header class="header" role="banner">
+  <h1 class="header__name">Don Hansen</h1>
+  <div class="header__contact" aria-label="Contact information">
+    <a href="mailto:don.hansen@example.com">don.hansen@example.com</a> |
+    <a href="tel:+15551234567">+1 (555) 123-4567</a> |
+    <a href="https://linkedin.com/in/donhansen" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+  <div class="header-controls">
+    <label for="palette-select" class="palette-switcher-label">Color Palette:</label>
+    <select id="palette-select" aria-label="Select color palette">
+      <option value="palette-1" selected>Calm Blue</option>
+      <option value="palette-2">Warm Terracotta</option>
+      <option value="palette-3">Fresh Green</option>
+      <option value="palette-4">Elegant Purple</option>
+    </select>
+    <button class="dark-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark Mode</button>
+  </div>
+</header>
+
+<nav class="nav" role="tablist" aria-label="Primary navigation">
+  <button
+    class="nav__button"
+    role="tab"
+    id="tab-resume"
+    aria-selected="true"
+    aria-controls="section-resume"
+    tabindex="0"
+    data-section="resume"
+  >
+    Resume
+  </button>
+  <button
+    class="nav__button"
+    role="tab"
+    id="tab-portfolio"
+    aria-selected="false"
+    aria-controls="section-portfolio"
+    tabindex="-1"
+    data-section="portfolio"
+  >
+    Portfolio
+  </button>
+  <button
+    class="nav__button"
+    role="tab"
+    id="tab-case-study"
+    aria-selected="false"
+    aria-controls="section-case-study"
+    tabindex="-1"
+    data-section="case-study"
+  >
+    UX Case Study
+  </button>
+</nav>
+
+<main class="content" tabindex="-1">
+  <!-- Resume Section -->
+  <section id="section-resume" class="section section--active" role="tabpanel" aria-labelledby="tab-resume">
+    <h2>Resume</h2>
+
+    <div class="resume__section">
+      <h3 class="resume__section-title">Experience</h3>
+      <ul class="resume__list">
+        <li>
+          <span class="resume__job-title">Senior Design Technologist</span>
+          <span class="resume__job-company">@ Creative Agency</span>
+          <span class="resume__job-dates">2020 – Present</span>
+          <p class="resume__job-description">
+            Leading front-end development and UX design for multiple high-profile client projects,
+            mentoring junior developers, and collaborating closely with creative teams to deliver
+            engaging, accessible digital experiences.
+          </p>
+        </li>
+        <li>
+          <span class="resume__job-title">UX/UI Designer & Developer</span>
+          <span class="resume__job-company">@ Digital Startup</span>
+          <span class="resume__job-dates">2016 – 2020</span>
+          <p class="resume__job-description">
+            Designed and developed responsive web applications using modern JavaScript frameworks and
+            CSS methodologies, conducted user research, and created wireframes and prototypes.
+          </p>
+        </li>
+        <li>
+          <span class="resume__job-title">Senior Design Technologist</span>
+          <span class="resume__job-company">@ Creative Agency</span>
+          <span class="resume__job-dates">2020 – Present</span>
+          <p class="resume__job-description">
+            Leading front-end development and UX design for multiple high-profile client projects,
+            mentoring junior developers, and collaborating closely with creative teams to deliver
+            engaging, accessible digital experiences.
+          </p>
+        </li>
+        <li>
+          <span class="resume__job-title">UX/UI Designer & Developer</span>
+          <span class="resume__job-company">@ Digital Startup</span>
+          <span class="resume__job-dates">2016 – 2020</span>
+          <p class="resume__job-description">
+            Designed and developed responsive web applications using modern JavaScript frameworks and
+            CSS methodologies, conducted user research, and created wireframes and prototypes.
+          </p>
+        </li>
+        <li>
+          <span class="resume__job-title">Senior Design Technologist</span>
+          <span class="resume__job-company">@ Creative Agency</span>
+          <span class="resume__job-dates">2020 – Present</span>
+          <p class="resume__job-description">
+            Leading front-end development and UX design for multiple high-profile client projects,
+            mentoring junior developers, and collaborating closely with creative teams to deliver
+            engaging, accessible digital experiences.
+          </p>
+        </li>
+        <li>
+          <span class="resume__job-title">UX/UI Designer & Developer</span>
+          <span class="resume__job-company">@ Digital Startup</span>
+          <span class="resume__job-dates">2016 – 2020</span>
+          <p class="resume__job-description">
+            Designed and developed responsive web applications using modern JavaScript frameworks and
+            CSS methodologies, conducted user research, and created wireframes and prototypes.
+          </p>
+        </li>
+        <li>
+          <span class="resume__job-title">Senior Design Technologist</span>
+          <span class="resume__job-company">@ Creative Agency</span>
+          <span class="resume__job-dates">2020 – Present</span>
+          <p class="resume__job-description">
+            Leading front-end development and UX design for multiple high-profile client projects,
+            mentoring junior developers, and collaborating closely with creative teams to deliver
+            engaging, accessible digital experiences.
+          </p>
+        </li>
+        <li>
+          <span class="resume__job-title">UX/UI Designer & Developer</span>
+          <span class="resume__job-company">@ Digital Startup</span>
+          <span class="resume__job-dates">2016 – 2020</span>
+          <p class="resume__job-description">
+            Designed and developed responsive web applications using modern JavaScript frameworks and
+            CSS methodologies, conducted user research, and created wireframes and prototypes.
+          </p>
+        </li>                        
+      </ul>
+    </div>
+
+    <div class="resume__section">
+      <h3 class="resume__section-title">Skills</h3>
+      <ul class="resume__list">
+        <li>HTML5, CSS3, JavaScript (ES6+), React</li>
+        <li>UX Research & User Testing</li>
+        <li>Responsive & Mobile-First Design</li>
+        <li>CSS Grid & Flexbox Layouts</li>
+        <li>Accessibility (WCAG 2.1)</li>
+      </ul>
+    </div>
+
+    <div class="resume__section">
+      <h3 class="resume__section-title">Education</h3>
+      <ul class="resume__list">
+        <li>
+          <span class="resume__job-title">B.A. in Graphic Design</span>,
+          <span class="resume__job-company">State University</span>,
+          <span class="resume__job-dates">2012 – 2016</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="section-portfolio" class="section" role="tabpanel" aria-labelledby="tab-portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio__grid">
+      <article class="portfolio__item" tabindex="0" aria-label="Project: Interactive Website">
+        <h3 class="portfolio__title">Interactive Website</h3>
+        <p class="portfolio__desc">A dynamic web experience built with React and CSS Grid for a local museum.</p>
+        <a href="#" class="portfolio__link">View project</a>
+      </article>
+      <article class="portfolio__item" tabindex="0" aria-label="Project: Mobile App UI">
+        <h3 class="portfolio__title">Mobile App UI</h3>
+        <p class="portfolio__desc">Redesigned UI for a fitness tracking app focusing on usability and engagement.</p>
+        <a href="#" class="portfolio__link">View project</a>
+      </article>
+      <article class="portfolio__item" tabindex="0" aria-label="Project: E-commerce Redesign">
+        <h3 class="portfolio__title">E-commerce Redesign</h3>
+        <p class="portfolio__desc">Improved user flow and checkout experience for a small retail brand’s online store.</p>
+        <a href="#" class="portfolio__link">View project</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Case Study Section -->
+  <section id="section-case-study" class="section" role="tabpanel" aria-labelledby="tab-case-study">
+    <h2>UX Case Study: Redesigning a Local Library Website</h2>
+    <p class="case-study__summary">
+      An end-to-end user experience redesign focusing on accessibility, content discoverability,
+      and mobile responsiveness.
+    </p>
+
+    <label for="thumbnail-size" class="case-study__dropdown">Thumbnail size:</label>
+    <select id="thumbnail-size" aria-label="Select thumbnail size for case study images">
+      <option value="case-study__images--small">Small</option>
+      <option value="case-study__images--medium" selected>Medium</option>
+      <option value="case-study__images--large">Large</option>
+      <option value="case-study__images--xlarge">Extra Large</option>
+    </select>
+
+    <div id="case-study-images" class="case-study__images case-study__images--medium" tabindex="0" aria-label="Case study project images">
+      <img src="https://via.placeholder.com/300x200?text=Wireframe+1" alt="Wireframe 1" class="case-study__image" tabindex="0" />
+      <img src="https://via.placeholder.com/300x200?text=Wireframe+2" alt="Wireframe 2" class="case-study__image" tabindex="0" />
+      <img src="https://via.placeholder.com/300x200?text=Prototype" alt="Interactive prototype screenshot" class="case-study__image" tabindex="0" />
+      <img src="https://via.placeholder.com/300x200?text=Final+Design" alt="Final design screenshot" class="case-study__image" tabindex="0" />
+    </div>
+
+    <button class="accordion__button" aria-expanded="false" aria-controls="panel-1" id="accordion-1">
+      Project Context
+    </button>
+    <div id="panel-1" class="accordion__panel" role="region" aria-labelledby="accordion-1" hidden>
+      <p>The local library's website was outdated and hard to navigate, especially on mobile devices. The goal was to modernize the interface and improve content discovery.</p>
+    </div>
+
+    <button class="accordion__button" aria-expanded="false" aria-controls="panel-2" id="accordion-2">
+      Research & Discovery
+    </button>
+    <div id="panel-2" class="accordion__panel" role="region" aria-labelledby="accordion-2" hidden>
+      <p>Conducted user interviews and usability testing to identify pain points and understand user goals. Accessibility audits were also performed.</p>
+    </div>
+
+    <button class="accordion__button" aria-expanded="false" aria-controls="panel-3" id="accordion-3">
+      Design & Prototyping
+    </button>
+    <div id="panel-3" class="accordion__panel" role="region" aria-labelledby="accordion-3" hidden>
+      <p>Created wireframes and high-fidelity prototypes incorporating feedback from stakeholders and users. Focused on responsive and accessible design.</p>
+    </div>
+
+    <button class="accordion__button" aria-expanded="false" aria-controls="panel-4" id="accordion-4">
+      Testing & Iteration
+    </button>
+    <div id="panel-4" class="accordion__panel" role="region" aria-labelledby="accordion-4" hidden>
+      <p>Iterative usability testing helped refine navigation and interaction flows. Adjustments were made to ensure color contrast and keyboard navigation met standards.</p>
+    </div>
+
+    <button class="accordion__button" aria-expanded="false" aria-controls="panel-5" id="accordion-5">
+      Results & Impact
+    </button>
+    <div id="panel-5" class="accordion__panel" role="region" aria-labelledby="accordion-5" hidden>
+      <p>The redesigned website increased mobile traffic by 35%, improved user satisfaction, and reduced bounce rates by 20%. Accessibility compliance improved significantly.</p>
+    </div>
+
+    <button class="accordion__button" aria-expanded="false" aria-controls="panel-6" id="accordion-6">
+      Technologies Used
+    </button>
+    <div id="panel-6" class="accordion__panel" role="region" aria-labelledby="accordion-6" hidden>
+      <p>HTML5, CSS3 (Grid & Flexbox), JavaScript, ARIA for accessibility, Figma for design & prototyping, and Lighthouse for audits.</p>
+    </div>
+  </section>
+</main>
+
+<!-- Lightbox Modal -->
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" tabindex="-1">
+  <button class="lightbox__btn lightbox__btn--close" aria-label="Close image preview">&times;</button>
+  <button class="lightbox__btn lightbox__btn--prev" aria-label="Previous image">&#8249;</button>
+  <img src="" alt="" class="lightbox__image" />
+  <button class="lightbox__btn lightbox__btn--next" aria-label="Next image">&#8250;</button>
+</div>
+
+<script>
+  // Palette switching
+  const paletteSelect = document.getElementById('palette-select');
+  const rootElement = document.documentElement; // <html>
+
+  // Initialize default palette
+  rootElement.classList.add('palette-1');
+
+  paletteSelect.addEventListener('change', (e) => {
+    rootElement.classList.remove('palette-1', 'palette-2', 'palette-3', 'palette-4');
+    rootElement.classList.add(e.target.value);
+  });
+
+  // Dark mode toggle
+  const darkToggle = document.querySelector('.dark-toggle');
+  darkToggle.addEventListener('click', () => {
+    const isDark = rootElement.classList.toggle('dark');
+    darkToggle.setAttribute('aria-pressed', isDark);
+    darkToggle.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+  });
+
+  // Navigation tab functionality
+  const navButtons = document.querySelectorAll('.nav__button');
+  const sections = document.querySelectorAll('.section');
+  const contentMain = document.querySelector('main.content');
+
+  navButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Update nav buttons aria-selected and tabindex
+      navButtons.forEach(btn => {
+        btn.setAttribute('aria-selected', 'false');
+        btn.setAttribute('tabindex', '-1');
+      });
+      button.setAttribute('aria-selected', 'true');
+      button.setAttribute('tabindex', '0');
+
+      // Show correct section
+      const target = button.dataset.section;
+      sections.forEach(section => {
+        if (section.id === `section-${target}`) {
+          section.classList.add('section--active');
+          section.setAttribute('tabindex', '-1');
+          section.focus();
+        } else {
+          section.classList.remove('section--active');
+          section.removeAttribute('tabindex');
+        }
+      });
+    });
+  });
+
+  // Accordion expand/collapse
+  const accordions = document.querySelectorAll('.accordion__button');
+  accordions.forEach(button => {
+    button.addEventListener('click', () => {
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', !expanded);
+      const panel = document.getElementById(button.getAttribute('aria-controls'));
+      if (!expanded) {
+        panel.hidden = false;
+      } else {
+        panel.hidden = true;
+      }
+    });
+  });
+
+  // Case study thumbnail size switcher
+  const thumbnailSelect = document.getElementById('thumbnail-size');
+  const caseImages = document.getElementById('case-study-images');
+  thumbnailSelect.addEventListener('change', e => {
+    caseImages.className = 'case-study__images ' + e.target.value;
+  });
+
+  // Lightbox functionality
+  (function(){
+    const lightbox = document.querySelector('.lightbox');
+    const lightboxImg = lightbox.querySelector('.lightbox__image');
+    const btnClose = lightbox.querySelector('.lightbox__btn--close');
+    const btnPrev = lightbox.querySelector('.lightbox__btn--prev');
+    const btnNext = lightbox.querySelector('.lightbox__btn--next');
+    let images = Array.from(document.querySelectorAll('.case-study__image'));
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      updateLightboxImage();
+      lightbox.classList.add('lightbox--active');
+      lightbox.focus();
+    }
+    function closeLightbox() {
+      lightbox.classList.remove('lightbox--active');
+    }
+    function updateLightboxImage() {
+      const img = images[currentIndex];
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+    }
+    function showPrev() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      updateLightboxImage();
+    }
+    function showNext() {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateLightboxImage();
+    }
+
+    images.forEach((img, i) => {
+      img.addEventListener('click', () => openLightbox(i));
+      img.addEventListener('keydown', e => {
+        if(e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openLightbox(i);
+        }
+      });
+    });
+
+    btnClose.addEventListener('click', closeLightbox);
+    btnPrev.addEventListener('click', showPrev);
+    btnNext.addEventListener('click', showNext);
+
+    // Keyboard support for lightbox
+    lightbox.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') showPrev();
+      if (e.key === 'ArrowRight') showNext();
+    });
+
+    // Clicking outside image closes lightbox
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) closeLightbox();
+    });
+  })();
+</script>
+
+</body>
+</html>
