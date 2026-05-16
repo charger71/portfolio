@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Don Hansen - Portfolio</title>
@@ -6,13 +7,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet" async rel="preload"> 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Quattrocento:wght@400;700&display=swap">
 
-<link href="css/style.css" rel="stylesheet" async> 
+<link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
+
+    <a href="#main-content" class="skip-to-content" style="position:absolute; left:-9999px; top:0; z-index:999; padding:0.5em 1em; background:#000; color:#fff;" onfocus="this.style.left='0'" onblur="this.style.left='-9999px'">Skip to main content</a>
 
     <div class="full-width-cont header">
 
@@ -30,12 +33,12 @@
         <div class="social-cont">
 
             <ul class="social-icons">
-                <li><a href="https://www.linkedin.com/in/dchansen/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/charger71" target="_blank"><i class="fa fa-github"></i></a></li>
-                <li><a href="https://codepen.io/charger71" target="_blank"><i class="fa fa-codepen"></i></a></li>
-                <li><a href="https://www.facebook.com/charger71/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="https://www.instagram.com/charger71/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="https://vimeo.com/user18094978" target="_blank"><i class="fa fa-vimeo"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/dchansen/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href="https://github.com/charger71" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                <li><a href="https://codepen.io/charger71" target="_blank" rel="noopener noreferrer" aria-label="CodePen profile"><i class="fa fa-codepen" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.facebook.com/charger71/" target="_blank" rel="noopener noreferrer" aria-label="Facebook profile"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/charger71/" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="https://vimeo.com/user18094978" target="_blank" rel="noopener noreferrer" aria-label="Vimeo profile"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
             </ul>
 
         </div>
@@ -60,6 +63,8 @@
 
 <!-- BEGIN PORTFOLIO SECTION -->    
 
+<main id="main-content">
+
 <div id="port-cont" style="display: block;" class="tabcontent2">
 
     <section class="cont">
@@ -73,6 +78,7 @@
     </section>
 
     <section class="proj-nav cont">
+    <a class="btn proj-nav-lnk active" onclick="openInfo(event, 'codeyou')">Code:You</a>
     <a class="btn proj-nav-lnk" onclick="openInfo(event, 'red')">Real Estate Distilled</a>
     <a class="btn proj-nav-lnk" onclick="openInfo(event, 'globallou')">Global Louisville</a>
     <a class="btn proj-nav-lnk" onclick="openInfo(event, 'fuzzygolf')">Fuzzy Zoeller Golf</a>
@@ -84,7 +90,69 @@
 
     <section class="proj-item cont">
 
-    <div id="red" style="display: block;" class="tabcontent">
+    <div id="codeyou" style="display: block;" class="tabcontent">
+        
+        <div class="tab-txt">
+
+            <div class="">
+
+                <h3>Code:You — Statewide Rebrand &amp; Brand System</h3>
+
+                <p>In 2015, Code Louisville launched as a nonprofit workforce development program teaching Kentuckians to code. By 2021, the Commonwealth of Kentucky wanted to replicate the program statewide as Code Kentucky — same curriculum, same mentors, same model. The result was dual-branded everything: two websites, two brands, fragmented student experience, and an operational burden that grew with every cohort.</p>
+
+                <p>During a leadership brainstorm, I proposed a name that could hold everything: <strong>Code:You</strong>. The previous brands tied the program to one city or one state. Code:You centers on the only thing that never changes — the student. The name scales to any geography, any future program. And the colon does double duty: it reads as both programming syntax and a personal address — <em>code: you</em>.</p>
+
+                <p>We hired an agency for the visual identity. Most of their work came back cold and disconnected from the human mission — but buried in their exploration was one idea worth keeping: a sideways <strong>C:Y</strong> mark. Read sideways, the letters become a face. The C is a smile, the colon becomes a pair of eyes, the Y is a punk hairdo. It's immediately friendly without being childish. That mark became the kernel; everything else got rebuilt around it — lockup, color, typography, sub-brand system, and the rules for how it all fit together.</p>
+
+                <p>And for anyone who looks closely: <strong>the logo winks.</strong> On the live site, watch it on the homepage for about twenty seconds.</p>
+
+                <p>With a unified brand came the chance to fix what had been broken for students from the start: the application experience. Previously, a prospective student had to know <em>which</em> program they were applying for before they could even begin — Code Louisville or Code Kentucky? JavaScript or UX? Most students didn't know, and that friction was turning people away. The new code-you.org consolidated everything: a single application flow that routes students to the right program on the backend (invisible to the applicant), eligibility checks that automatically surface support like free laptops and stipends, and one resource hub instead of two scattered ones.</p>
+
+                <p>I also helped form a small internal marketing team and rebuilt the organization's social media presence from a dormant baseline, focusing on consistency and authenticity over volume.</p>
+
+            </div>
+
+            <div class="">
+
+                <aside class="proj-aside">
+
+                    <h3>Visit Online:</h3>
+
+                    <p><a href="https://code-you.org/" target="_blank" rel="noopener noreferrer">Visit code-you.org</a></p>
+
+                    <h3>Outcomes</h3>
+
+                    <ul>
+                        <li>1,335+ graduates placed in tech jobs</li>
+                        <li>700+ hiring partner companies in the network</li>
+                        <li>15,000+ donated mentorship hours program-wide since 2015</li>
+                        <li>Unified three programs under a single brand and website</li>
+                        <li>Automated eligibility routing, removing manual staff intervention</li>
+                    </ul>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+        <div class="tab-img">
+
+            <img src="assets/codeyou-main.jpg" alt="Code:You primary logo lockup" class="proj-img">
+            <img src="assets/codeyou-logo-cy-mark.jpg" alt="The C:Y mark — sideways face with smile, eyes, and punk hair" class="proj-img">
+            <img src="assets/codeyou-logo-family.jpg" alt="Logo family — Code:You, Code Louisville, and Code Kentucky side by side" class="proj-img">
+            <img src="assets/codeyou-brandguide-01.jpg" alt="Brand guide spread" class="proj-img">
+            <img src="assets/codeyou-brandguide-02.jpg" alt="Brand guide spread" class="proj-img">
+            <img src="assets/codeyou-website-home.jpg" alt="code-you.org homepage" class="proj-img">
+            <img src="assets/codeyou-application-flow.jpg" alt="Unified application flow" class="proj-img">
+            <img src="assets/codeyou-marketing.jpg" alt="Marketing and social media samples" class="proj-img">
+
+        </div>
+
+    </div>
+
+
+    <div id="red" style="display: none;" class="tabcontent">
         
         <div class="tab-txt">
 
@@ -105,7 +173,7 @@
                     <h3>Special Recognition</h3>
 
                     <p>2017 - AIGA Louisville's The Show Winner</p>
-                    <p><a href="https://heydesign.com/2017/05/new-round-of-logo-design-amazing-examples-for-your-inspiration/">HeyDesign.com</a> - Logos for your inspiration. <span class="proj-aside-date">May, 2017</span></p>
+                    <p><a href="https://heydesign.com/2017/05/new-round-of-logo-design-amazing-examples-for-your-inspiration/" target="_blank" rel="noopener noreferrer">HeyDesign.com</a> - Logos for your inspiration. <span class="proj-aside-date">May, 2017</span></p>
 
                 </aside>
 
@@ -115,11 +183,11 @@
 
         <div class="tab-img">
 
-            <img src="assets/redc-main.jpg" alt="" class="proj-img">
-            <img src="assets/redc-logo-variations.jpg" alt="" class="proj-img">
-            <img src="assets/redc-brandguide-01.jpg" alt="" class="proj-img">
-            <img src="assets/redc-brandguide-02.jpg" alt="" class="proj-img">
-            <img src="assets/redc-icons.jpg" alt="" class="proj-img">
+            <img src="assets/redc-main.jpg" alt="Real Estate Distilled — primary brand identity" class="proj-img">
+            <img src="assets/redc-logo-variations.jpg" alt="Real Estate Distilled logo variations" class="proj-img">
+            <img src="assets/redc-brandguide-01.jpg" alt="Real Estate Distilled brand guide spread" class="proj-img">
+            <img src="assets/redc-brandguide-02.jpg" alt="Real Estate Distilled brand guide spread" class="proj-img">
+            <img src="assets/redc-icons.jpg" alt="Real Estate Distilled icon set" class="proj-img">
 
             
         </div>
@@ -147,11 +215,11 @@
 
                 <h3>More Info:</h3>
 
-                <p><a href="https://www.youtube.com/watch?v=EBZH74nXqgc" target="_blank">Watch Press Event</a></p>
+                <p><a href="https://www.youtube.com/watch?v=EBZH74nXqgc" target="_blank" rel="noopener noreferrer">Watch Press Event</a></p>
 
-                <p><a href="https://louisvilleky.gov/government/globalization/global-louisville-action-plan" target="_blank">Louisvilleky.gov</a></p>
+                <p><a href="https://louisvilleky.gov/government/globalization/global-louisville-action-plan" target="_blank" rel="noopener noreferrer">Louisvilleky.gov</a></p>
 
-                <p><a href="https://louisvilleky.gov/document/globallouisvilleactionplan12162016pdf" target="_blank">Download PDF</a></p>
+                <p><a href="https://louisvilleky.gov/document/globallouisvilleactionplan12162016pdf" target="_blank" rel="noopener noreferrer">Download PDF</a></p>
 
 
             </aside>
@@ -163,12 +231,12 @@
 
     <div class="tab-img">
 
-        <img src="assets/globallou-cover-photo.jpg" alt="" class="proj-img">
-        <img src="assets/globallou-inside-photo.jpg" alt="" class="proj-img">
+        <img src="assets/globallou-cover-photo.jpg" alt="Global Louisville Action Plan booklet cover" class="proj-img">
+        <img src="assets/globallou-inside-photo.jpg" alt="Global Louisville Action Plan interior spread with infographics" class="proj-img">
         <img src="assets/globallou-announce-photo.jpg" alt="Greater Louisville Inc. President Kent Oyler, center, helped unveil the Global Action Plan" class="proj-img">
-        <em style="font-size: 12px;">Greater Louisville leaders holding copies of the booklet during the press announcement.</em>
-        <img src="assets/globallou-cover1-photo.jpg" alt="" class="proj-img">
-        <img src="assets/globallou-inside1-photo.jpg" alt="" class="proj-img">
+        <p class="proj-caption" style="font-size: 12px; font-style: italic;">Greater Louisville leaders holding copies of the booklet during the press announcement.</p>
+        <img src="assets/globallou-cover1-photo.jpg" alt="Global Louisville booklet alternate cover" class="proj-img">
+        <img src="assets/globallou-inside1-photo.jpg" alt="Global Louisville booklet interior page" class="proj-img">
         
     </div>
 
@@ -195,7 +263,7 @@
 
                 <h3>Visit Online:</h3>
 
-                <p><a href="https://fuzzygolf.com/" target="_blank">Visit FuzzyGolf.com</a></p>
+                <p><a href="https://fuzzygolf.com/" target="_blank" rel="noopener noreferrer">Visit FuzzyGolf.com</a></p>
 
             </aside>
 
@@ -206,10 +274,10 @@
 
     <div class="tab-img">
 
-        <img src="assets/fuzzygolf-main.jpg" alt="" class="proj-img">
-        <img src="assets/fuzzygolf-cp-home.jpg" alt="" class="proj-img">
-        <img src="assets/fuzzygolf-cb-home.jpg" alt="" class="proj-img">
-        <img src="assets/fuzzygolf-about.jpg" alt="" class="proj-img">
+        <img src="assets/fuzzygolf-main.jpg" alt="Fuzzy Zoeller Golf website hero" class="proj-img">
+        <img src="assets/fuzzygolf-cp-home.jpg" alt="Champions Pointe golf course homepage" class="proj-img">
+        <img src="assets/fuzzygolf-cb-home.jpg" alt="Covered Bridge golf course homepage" class="proj-img">
+        <img src="assets/fuzzygolf-about.jpg" alt="Fuzzy Zoeller Golf about page" class="proj-img">
         
     </div>
 
@@ -231,7 +299,7 @@
                     <li>During the Shark Tank campaign, the average user spent nearly six minutes on the site, an increase of 500% from the same period a year earlier.</li>
                     <li>20% of users visited the shop page during the Shark Tank campaign.</li>
                     <li>Traffic to the site was largely driven by organic search (viewers searching for Natural Grip in their search bars; 52%), and referral traffic (news coverage of the episode).</li>
-                    <li>An article on <a href="https://web.archive.org/web/20170426115914/http://finance.yahoo.com/news/shark-tank-investor-daymond-john-005800601.html" target="_blank">Yahoo! Finance </a>posted after the episode aired drove 16,000 visits to the site.</li>
+                    <li>An article on <a href="https://web.archive.org/web/20170426115914/http://finance.yahoo.com/news/shark-tank-investor-daymond-john-005800601.html" target="_blank" rel="noopener noreferrer">Yahoo! Finance</a> posted after the episode aired drove 16,000 visits to the site.</li>
                 </ul>
                 
             </div>
@@ -242,7 +310,7 @@
     
                     <h3>Visit Online:</h3>
     
-                    <p><a href="https://www.sharktankblog.com/business/the-natural-grip/" target="_blank">Episode Info</a></p>
+                    <p><a href="https://www.sharktankblog.com/business/the-natural-grip/" target="_blank" rel="noopener noreferrer">Episode Info</a></p>
     
                 </aside>
     
@@ -253,10 +321,10 @@
     
         <div class="tab-img">
     
-            <img src="assets/tng-main.jpg" alt="" class="proj-img">
-            <img src="assets/tng-wireframes.jpg" alt="" class="proj-img">
-            <img src="assets/tng-grip-hands.jpg" alt="" class="proj-img">
-            <img src="assets/tng-desktop.jpg" alt="" class="proj-img">
+            <img src="assets/tng-main.jpg" alt="The Natural Grip — Shark Tank launch landing page" class="proj-img">
+            <img src="assets/tng-wireframes.jpg" alt="The Natural Grip site wireframes" class="proj-img">
+            <img src="assets/tng-grip-hands.jpg" alt="Custom illustration of hands using The Natural Grip" class="proj-img">
+            <img src="assets/tng-desktop.jpg" alt="The Natural Grip desktop site" class="proj-img">
             
         </div>
     
@@ -283,7 +351,7 @@
 
                     <h3>Visit Online:</h3>
 
-                    <p><a href="http://www.miragee.com/" target="_blank">Visit Miragee.com</a></p>
+                    <p><a href="http://www.miragee.com/" target="_blank" rel="noopener noreferrer">Visit Miragee.com</a></p>
 
                 </aside>
 
@@ -294,12 +362,12 @@
     
         <div class="tab-img">
     
-            <img src="assets/miragee-brand-logo.jpg" alt="" class="proj-img">
-            <img src="assets/miragee-brandbook.jpg" alt="" class="proj-img">
-            <img src="assets/miragee-branding.jpg" alt="" class="proj-img">
-            <img src="assets/miragee-main.jpg" alt="" class="proj-img">
-            <img src="assets/miragee-main2.jpg" alt="" class="proj-img">
-            <img src="assets/miragee-mockup-homepage.png" alt="" class="proj-img">
+            <img src="assets/miragee-brand-logo.jpg" alt="Miragee primary logo" class="proj-img">
+            <img src="assets/miragee-brandbook.jpg" alt="Miragee brand book spread" class="proj-img">
+            <img src="assets/miragee-branding.jpg" alt="Miragee branding system overview" class="proj-img">
+            <img src="assets/miragee-main.jpg" alt="Miragee website" class="proj-img">
+            <img src="assets/miragee-main2.jpg" alt="Miragee website secondary view" class="proj-img">
+            <img src="assets/miragee-mockup-homepage.png" alt="Miragee homepage mockup" class="proj-img">
             
         </div>
     
@@ -315,30 +383,28 @@
 
         <div class="animat">
 
-            <div class="video-responsive"><iframe src="https://player.vimeo.com/video/313431150?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="video-responsive"><iframe src="https://player.vimeo.com/video/313431150?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Animated product video"></iframe></div>
 
-            <div class="video-responsive"><iframe src="https://player.vimeo.com/video/223373409?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="video-responsive"><iframe src="https://player.vimeo.com/video/223373409?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Animated product video"></iframe></div>
 
-            <div class="video-responsive"><iframe src="https://player.vimeo.com/video/65371666?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="video-responsive"><iframe src="https://player.vimeo.com/video/65371666?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Animated product video"></iframe></div>
 
         </div>
 
         <div class="">
 
             <h3>Commonwealth (Walden) Theatre Center Enrollment videos.</h3>
-            <p>Artwork by the late, great, <a href="https://wfpl.org/remembering-louisville-illest-strator-kevlen-goodner/" target="_blank">Kevlen Goodner</a>, with <a href="https://mightily.com" target="_blank">Mightily</a></p>
+            <p>Artwork by the late, great, <a href="https://wfpl.org/remembering-louisville-illest-strator-kevlen-goodner/" target="_blank" rel="noopener noreferrer">Kevlen Goodner</a>, with <a href="https://mightily.com" target="_blank" rel="noopener noreferrer">Mightily</a></p>
 
         </div>
 
         <div class="animat">
 
-            <div class="video-responsive"><iframe src="https://player.vimeo.com/video/250125345?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="video-responsive"><iframe src="https://player.vimeo.com/video/250125345?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Commonwealth Theatre Center enrollment video"></iframe></div>
 
-            <div class="video-responsive"><iframe src="https://player.vimeo.com/video/256145269?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+            <div class="video-responsive"><iframe src="https://player.vimeo.com/video/256145269?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Commonwealth Theatre Center enrollment video"></iframe></div>
 
-            <div class="video-responsive"><iframe src="https://player.vimeo.com/video/256841649?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-
-            <script src="https://player.vimeo.com/api/player.js"></script>
+            <div class="video-responsive"><iframe src="https://player.vimeo.com/video/256841649?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Commonwealth Theatre Center enrollment video"></iframe></div>
 
         </div>
 
@@ -358,33 +424,33 @@
 
         <div class="mason-cont">
 
-        <img class="proj-more-img" src="assets/bracketpress_logocomp.png" alt="">
-        <img class="proj-more-img" src="assets/dhansen-huntersthompson.jpg" alt="">
-        <img class="proj-more-img" src="assets/drib-spaceranger-fl.png" alt="">
-        <img class="proj-more-img" src="assets/infinitesol-main.jpg" alt="">
-        <img class="proj-more-img" src="assets/asi-mockup.jpg" alt="">
-        <img class="proj-more-img" src="assets/aiga-theshow-2015-poster.jpg" alt="">
-        <img class="proj-more-img" src="assets/papalinos-2013.jpg" alt="">
-        <img class="proj-more-img" src="assets/menofimpact_postcard.png" alt="">
-        <img class="proj-more-img" src="assets/mvisions.png" alt="">
-        <img class="proj-more-img" src="assets/bb-famouscreations-full.jpg" alt="">
-        <img class="proj-more-img" src="assets/badtooth_sketch.jpg" alt="">
-        <img class="proj-more-img" src="assets/badtooth_logo.jpg" alt="">
-        <img class="proj-more-img" src="assets/wicks-group-1.jpg" alt="">
-        <img class="proj-more-img" src="assets/cooks-main.jpg" alt="">
-        <img class="proj-more-img" src="assets/papalinos_websitecomp.png" alt="" class="proj-more-img">
-        <img class="proj-more-img" src="assets/amdream_cdcase.png" alt="">
-        <img class="proj-more-img" src="assets/amdream_posterb.png" alt="">
-        <img class="proj-more-img" src="assets/elevate.png" alt="">
-        <img class="proj-more-img" src="assets/highlands-fest.png" alt="">
-        <img class="proj-more-img" src="assets/getfit-main.jpg" alt="">
-        <img class="proj-more-img" src="assets/gp-main.jpg" alt="">
-        <img class="proj-more-img" src="assets/highland-main.jpg" alt="">
-        <img class="proj-more-img" src="assets/m2transport_home.png" alt="">
-        <img class="proj-more-img" src="assets/newlife_homepage.png" alt="">
-        <img class="proj-more-img" src="assets/cw-website-full.png" alt="">
-        <img class="proj-more-img" src="assets/lgda-email.jpg" alt="">
-        <img class="proj-more-img" src="assets/papa-2013_desktop_home_page.png" alt="">
+        <img class="proj-more-img" src="assets/bracketpress_logocomp.png" alt="BracketPress logo concept">
+        <img class="proj-more-img" src="assets/dhansen-huntersthompson.jpg" alt="Hunter S. Thompson poster illustration">
+        <img class="proj-more-img" src="assets/drib-spaceranger-fl.png" alt="Space Ranger illustration">
+        <img class="proj-more-img" src="assets/infinitesol-main.jpg" alt="Infinite Solutions branding">
+        <img class="proj-more-img" src="assets/asi-mockup.jpg" alt="Advanced Solutions Inc. site mockup">
+        <img class="proj-more-img" src="assets/aiga-theshow-2015-poster.jpg" alt="AIGA The Show 2015 poster">
+        <img class="proj-more-img" src="assets/papalinos-2013.jpg" alt="Papalinos Pizza 2013 branding">
+        <img class="proj-more-img" src="assets/menofimpact_postcard.png" alt="Men of Impact postcard">
+        <img class="proj-more-img" src="assets/mvisions.png" alt="Microvisions branding">
+        <img class="proj-more-img" src="assets/bb-famouscreations-full.jpg" alt="Famous Creations branding">
+        <img class="proj-more-img" src="assets/badtooth_sketch.jpg" alt="Bad Tooth logo sketch">
+        <img class="proj-more-img" src="assets/badtooth_logo.jpg" alt="Bad Tooth logo final">
+        <img class="proj-more-img" src="assets/wicks-group-1.jpg" alt="Wick's Pizza branding">
+        <img class="proj-more-img" src="assets/cooks-main.jpg" alt="Cook's Locksmith branding">
+        <img class="proj-more-img" src="assets/papalinos_websitecomp.png" alt="Papalinos website composition">
+        <img class="proj-more-img" src="assets/amdream_cdcase.png" alt="American Dream CD case design">
+        <img class="proj-more-img" src="assets/amdream_posterb.png" alt="American Dream poster">
+        <img class="proj-more-img" src="assets/elevate.png" alt="Elevate branding">
+        <img class="proj-more-img" src="assets/highlands-fest.png" alt="Highlands Festival branding">
+        <img class="proj-more-img" src="assets/getfit-main.jpg" alt="GetFit branding">
+        <img class="proj-more-img" src="assets/gp-main.jpg" alt="GP project branding">
+        <img class="proj-more-img" src="assets/highland-main.jpg" alt="Highland project branding">
+        <img class="proj-more-img" src="assets/m2transport_home.png" alt="M2 Transport homepage">
+        <img class="proj-more-img" src="assets/newlife_homepage.png" alt="New Life Church homepage">
+        <img class="proj-more-img" src="assets/cw-website-full.png" alt="Commonwealth website">
+        <img class="proj-more-img" src="assets/lgda-email.jpg" alt="LGDA email design">
+        <img class="proj-more-img" src="assets/papa-2013_desktop_home_page.png" alt="Papalinos 2013 desktop homepage">
         
         
         </div>
@@ -648,13 +714,21 @@
     
             <h3>MidwestUX 2016</h3>
             <h4><span class="accent">Communications Director</span> | 2015 &ndash; 2016</h4>
+
+            <ul class="resume-list">
+                <li>MidwestUX is a roaming conference raising the value and understanding of UX in the Midwest. The 2016 conference was held in Louisville, KY, with the theme &ldquo;Craftsmanship &amp; Hospitality.&rdquo; Led web and email marketing for the conference.</li>
+            </ul>
     
         </div>
     
         <div class="resume-item">
     
             <h3>WordCamp Louisville</h3>
-            <h4><span class="accent">Organizer</span> | 2012 &ndash; 2016</h4>
+            <h4><span class="accent">Volunteer Organizer</span> | 2012 &ndash; 2016</h4>
+
+            <ul class="resume-list">
+                <li>WordCamp Louisville is a community-organized conference dedicated to the WordPress community in Louisville, KY.</li>
+            </ul>
     
         </div>
     
@@ -671,7 +745,7 @@
         <p>Illustration &mdash; Space Explorer</p>
     
         <h4>2017 AIGA Louisville &ndash; The Show Award</h4>
-        <p>Branding &mdash; Real Estate Distilled Conference &middot; Featured in <a href="https://heydesign.com/2017/05/new-round-of-logo-design-amazing-examples-for-your-inspiration/" target="_blank">HeyDesign.com</a> &ldquo;Logos for Your Inspiration&rdquo; (May 2017)</p>
+        <p>Branding &mdash; Real Estate Distilled Conference &middot; Featured in <a href="https://heydesign.com/2017/05/new-round-of-logo-design-amazing-examples-for-your-inspiration/" target="_blank" rel="noopener noreferrer">HeyDesign.com</a> &ldquo;Logos for Your Inspiration&rdquo; (May 2017)</p>
     
         </div>
     
@@ -681,6 +755,8 @@
 </div>
 
 <!-- END RESUME SECTION -->
+
+</main>
 
     <div class="full-width-cont pre-footer">
 
@@ -749,47 +825,128 @@
 
     <footer class="cont">
 
-        &copy; 2026 Don Hansen | <a href="#">Privacy & Terms</a>
+        &copy; 2026 Don Hansen
 
     </footer>
 
     </div>
 
-    <div class="mobile-menu">
-
-
-    </div>
-
     <script>
 
-    function openInfo(evt, toolsName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");         
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("proj-nav-lnk");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(toolsName).style.display = "block";
-    evt.currentTarget.className += " active";                
+    // ─────────────────────────────────────────────────────────────────────────
+    // Tab switching
+    // ─────────────────────────────────────────────────────────────────────────
+    //
+    // The site has two parallel tab systems:
+    //   - "tabcontent"  : inner project tabs (Code:You, Real Estate Distilled, etc.)
+    //   - "tabcontent2" : outer page tabs   (Portfolio, About, Resume)
+    //
+    // openInfo()  and openInfo2() are kept as-is for backwards compatibility with
+    // existing inline onclick attributes. They now delegate to switchTab().
+
+    function switchTab(targetId, tabContentClass, navMatcher) {
+        // Hide all tabs in this group
+        var tabs = document.getElementsByClassName(tabContentClass);
+        for (var i = 0; i < tabs.length; i++) {
+            tabs[i].style.display = "none";
+        }
+        // Show the requested tab
+        var target = document.getElementById(targetId);
+        if (target) { target.style.display = "block"; }
+
+        // Update active state on the matching nav buttons
+        var navs = document.getElementsByClassName("proj-nav-lnk");
+        for (var j = 0; j < navs.length; j++) {
+            var onclickAttr = navs[j].getAttribute("onclick") || "";
+            if (navMatcher && navMatcher(onclickAttr)) {
+                navs[j].className = navs[j].className.replace(" active", "");
+                if (onclickAttr.indexOf("'" + targetId + "'") !== -1) {
+                    navs[j].className += " active";
+                }
+            }
+        }
     }
 
+    function openInfo(evt, targetId) {
+        switchTab(targetId, "tabcontent", function(attr) {
+            return attr.indexOf("openInfo(") === 0;
+        });
+    }
 
-    function openInfo2(evt, toolsName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent2");         
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
+    function openInfo2(evt, targetId) {
+        switchTab(targetId, "tabcontent2", function(attr) {
+            return attr.indexOf("openInfo2(") === 0;
+        });
     }
-    tablinks = document.getElementsByClassName("proj-nav-lnk");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // URL hash routing — enables deep links to projects and outer tabs.
+    // Examples:
+    //   portfolio/#naturalgrip   → opens Portfolio outer tab, switches to Natural Grip
+    //   portfolio/#about         → opens the About outer tab
+    //   portfolio/#resume        → opens the Resume outer tab
+    // ─────────────────────────────────────────────────────────────────────────
+
+    function routeFromHash() {
+        var hash = window.location.hash.replace("#", "");
+        if (!hash) { return; }
+
+        var projectTabs = ["codeyou", "red", "globallou", "fuzzygolf", "naturalgrip", "miragee", "morework"];
+        var outerTabs = { "portfolio": "port-cont", "about": "about-cont", "resume": "resume-cont" };
+
+        if (projectTabs.indexOf(hash) !== -1) {
+            // Project hash: ensure Portfolio outer tab is showing, then open the project
+            switchTab("port-cont", "tabcontent2", function(attr) {
+                return attr.indexOf("openInfo2(") === 0;
+            });
+            switchTab(hash, "tabcontent", function(attr) {
+                return attr.indexOf("openInfo(") === 0;
+            });
+            // Scroll into view after paint (more reliable than setTimeout)
+            requestAnimationFrame(function() {
+                requestAnimationFrame(function() {
+                    var el = document.getElementById(hash);
+                    if (el) { el.scrollIntoView({ behavior: "smooth", block: "start" }); }
+                });
+            });
+        } else if (outerTabs[hash]) {
+            switchTab(outerTabs[hash], "tabcontent2", function(attr) {
+                return attr.indexOf("openInfo2(") === 0;
+            });
+        }
     }
-    document.getElementById(toolsName).style.display = "block";
-    evt.currentTarget.className += " active";                
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // Accessibility wiring for tab buttons.
+    //
+    // The nav buttons are <a> tags without href, so they aren't focusable or
+    // keyboard-activatable by default. On page load we give them role="button",
+    // tabindex="0", and Enter/Space key handlers to activate them.
+    // ─────────────────────────────────────────────────────────────────────────
+
+    function wireUpTabAccessibility() {
+        var navs = document.getElementsByClassName("proj-nav-lnk");
+        for (var i = 0; i < navs.length; i++) {
+            var nav = navs[i];
+            nav.setAttribute("role", "button");
+            nav.setAttribute("tabindex", "0");
+            nav.addEventListener("keydown", function(evt) {
+                if (evt.key === "Enter" || evt.key === " ") {
+                    evt.preventDefault();
+                    this.click(); // Fires the inline onclick handler
+                }
+            });
+        }
     }
+
+    // Initialize on DOM ready
+    window.addEventListener("DOMContentLoaded", function() {
+        wireUpTabAccessibility();
+        routeFromHash();
+    });
+
+    // React to hash changes during navigation (back/forward buttons, in-page links)
+    window.addEventListener("hashchange", routeFromHash);
 
     </script>
 
