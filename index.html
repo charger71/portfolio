@@ -83,7 +83,6 @@
     <a class="btn proj-nav-lnk" onclick="openInfo(event, 'globallou')">Global Louisville</a>
     <a class="btn proj-nav-lnk" onclick="openInfo(event, 'fuzzygolf')">Fuzzy Zoeller Golf</a>
     <a class="btn proj-nav-lnk" onclick="openInfo(event, 'naturalgrip')">The Natural Grip</a>
-    <a class="btn proj-nav-lnk" onclick="openInfo(event, 'miragee')">Miragee</a>
     <a class="btn proj-nav-lnk" onclick="openInfo(event, 'morework')">More Work</a>
     
     </section>
@@ -251,9 +250,11 @@
 
         <h3>Fuzzy Zoeller Golf</h3>
 
-        <p>Champions Pointe & Covered Bridge Golf Clubs presented by Fuzzy Golf. Enjoy both 18 hole, 72 par courses designed in colaboration with Fuzzy Zoeller.</p>
+        <p>Two 18-hole, par-72 courses &mdash; Champions Pointe and Covered Bridge &mdash; designed in collaboration with Fuzzy Zoeller. By 2018, the existing website was holding the business back: a tables-based static HTML site with no CMS, no responsive layout, and a booking flow that was effectively unusable on a phone. Both courses lived on every page, which made it hard to learn anything about either one. And the most important thing a golfer comes to a course website to do &mdash; book a tee time &mdash; was the hardest thing to actually accomplish.</p>
 
-        <p>2 amazing golf courses, and 1 legendary player, FuzzyGolf needed a new responsive website, and a better way to manage 2 golf courses and in 1 website.</p>
+        <p>I rebuilt the site from the ground up on WordPress with a custom theme, designed and developed end-to-end. Each course got its own clearly separated identity within the parent brand. New interactive course maps replaced the previous static layouts. Proper booking pages were built around the actual flow a golfer needs &mdash; pick a course, pick a date, pick a time &mdash; instead of the buried multi-step process the old site demanded.</p>
+
+        <p>After launch, online tee time bookings grew substantially and overall site traffic increased significantly. The courses themselves are still operating today &mdash; now managed by <a href="https://www.kempersports.com/" target="_blank" rel="noopener noreferrer">KemperSports</a> under the combined name <a href="https://www.cbcpgolf.com" target="_blank" rel="noopener noreferrer">Covered Bridge and Champions Pointe</a>.</p>
 
         </div>
 
@@ -261,9 +262,19 @@
 
             <aside class="proj-aside">
 
-                <h3>Visit Online:</h3>
+                <h3>The Work</h3>
 
-                <p><a href="https://fuzzygolf.com/" target="_blank" rel="noopener noreferrer">Visit FuzzyGolf.com</a></p>
+                <ul>
+                    <li>Custom WordPress theme built from scratch</li>
+                    <li>Responsive design (the original site was unusable on mobile)</li>
+                    <li>Interactive course maps for both courses</li>
+                    <li>Streamlined tee time booking flow</li>
+                    <li>Replaced a tables-based static site with a CMS-driven build</li>
+                </ul>
+
+                <h3>The Courses Today</h3>
+
+                <p><a href="https://www.cbcpgolf.com" target="_blank" rel="noopener noreferrer">cbcpgolf.com</a></p>
 
             </aside>
 
@@ -274,7 +285,8 @@
 
     <div class="tab-img">
 
-        <img src="assets/fuzzygolf-main.jpg" alt="Fuzzy Zoeller Golf website hero" class="proj-img">
+        <img src="assets/fuzzygolf-before.jpg" alt="The previous Fuzzy Zoeller Golf site — tables-based, non-responsive, with both courses crowded onto every page" class="proj-img">
+        <img src="assets/fuzzygolf-main.jpg" alt="Fuzzy Zoeller Golf — redesigned site hero" class="proj-img">
         <img src="assets/fuzzygolf-cp-home.jpg" alt="Champions Pointe golf course homepage" class="proj-img">
         <img src="assets/fuzzygolf-cb-home.jpg" alt="Covered Bridge golf course homepage" class="proj-img">
         <img src="assets/fuzzygolf-about.jpg" alt="Fuzzy Zoeller Golf about page" class="proj-img">
@@ -330,48 +342,6 @@
     
         </div>
 
-    <div id="miragee" style="display: none;" class="tabcontent">
-
-        <div class="tab-txt">
-    
-            <div class="">
-
-                <h3>Miragee</h3>
-
-                <p>Came in for a new site, and got a new look to go with it.</p>
-
-                <p>As one of the leaders in healthcare technology consulting, Miragee knew they needed a new site. After looking at their existing branding I came up with a few concepts to show what an updated brand could look like. Miragee asked to do a full rebrand of the company and a new logo for it's sister company Miranext.</p>
-
-
-            </div>
-
-            <div class="">
-
-                <aside class="proj-aside">
-
-                    <h3>Visit Online:</h3>
-
-                    <p><a href="http://www.miragee.com/" target="_blank" rel="noopener noreferrer">Visit Miragee.com</a></p>
-
-                </aside>
-
-            </div>
-    
-    
-        </div>
-    
-        <div class="tab-img">
-    
-            <img src="assets/miragee-brand-logo.jpg" alt="Miragee primary logo" class="proj-img">
-            <img src="assets/miragee-brandbook.jpg" alt="Miragee brand book spread" class="proj-img">
-            <img src="assets/miragee-branding.jpg" alt="Miragee branding system overview" class="proj-img">
-            <img src="assets/miragee-main.jpg" alt="Miragee website" class="proj-img">
-            <img src="assets/miragee-main2.jpg" alt="Miragee website secondary view" class="proj-img">
-            <img src="assets/miragee-mockup-homepage.png" alt="Miragee homepage mockup" class="proj-img">
-            
-        </div>
-    
-    </div>        
 
     <div id="morework" style="display: none;" class="tabcontent">
 
@@ -891,7 +861,7 @@
         var hash = window.location.hash.replace("#", "");
         if (!hash) { return; }
 
-        var projectTabs = ["codeyou", "red", "globallou", "fuzzygolf", "naturalgrip", "miragee", "morework"];
+        var projectTabs = ["codeyou", "red", "globallou", "fuzzygolf", "naturalgrip", "morework"];
         var outerTabs = { "portfolio": "port-cont", "about": "about-cont", "resume": "resume-cont" };
 
         if (projectTabs.indexOf(hash) !== -1) {
