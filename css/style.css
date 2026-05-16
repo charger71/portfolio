@@ -66,7 +66,7 @@ p {
 }
 
 li {
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
 }
 
 .cont {
@@ -257,6 +257,10 @@ h3.tab-txt::after {
     font-weight: 200;
     text-transform: uppercase;
   }
+
+.proj-aside ul {
+    padding-left: 1rem;
+}
   
 aside > h3 {
   margin: 0;
