@@ -421,9 +421,8 @@ a:active {
 }
 
 .proj-nav-lnk {
-  padding: 0.5rem 1rem;
-  margin: 1rem 0;
-  border-bottom: none;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
 }
 
 .proj-nav-lnk.active {
@@ -607,6 +606,10 @@ ul.workbrands-list li:hover {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--color-gray-text);
+}
+
+.resume-item .lede {
+    font-size: 1.4rem;
 }
 
 ul.resume-list {
