@@ -44,7 +44,21 @@
         <p><span><strong>P:</strong> 502.930.7055</span></p>
         <p><span><strong>E:</strong> don@area71.com</span></p>
 
-        <div class="social-cont">
+        <p>I'm a Product Designer who's been bridging design and front-end engineering for 20+ years. I have led design and development across the full product lifecycle and ship alongside engineers rather than hand off to them. I've spent two decades embedded in Louisville's design and technology communities as a volunteer, mentoring and educating those wanting to learn. The rest of my time goes to my wife, daughter, my extended family and a small zoo of pets, Batman, Stephen King, and a fondness for murderous clowns apparently.</p>
+
+        <div role="tablist" aria-label="Site sections" class="outer-tablist">
+            <button type="button" role="tab" id="tab-port-cont" aria-controls="port-cont" aria-selected="true" class="btn proj-nav-lnk active" data-group="outer" data-target="port-cont">Portfolio</button>
+            <button type="button" role="tab" id="tab-about-cont" aria-controls="about-cont" aria-selected="false" tabindex="-1" class="btn proj-nav-lnk" data-group="outer" data-target="about-cont">About</button>
+            <button type="button" role="tab" id="tab-resume-cont" aria-controls="resume-cont" aria-selected="false" tabindex="-1" class="btn proj-nav-lnk" data-group="outer" data-target="resume-cont">Resume</button>
+        </div>
+
+    </div>
+
+    <div class="contact-photo">
+
+        <img src="assets/dchansen-color.jpg" alt="Headshot of Don Hansen" class="contact-headshot" width="400" height="400">
+
+                <div class="social-cont">
 
             <ul class="social-icons">
                 <li><a href="https://www.linkedin.com/in/dchansen/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
@@ -57,20 +71,6 @@
 
         </div>
 
-        <p>I'm a Product Designer who's been bridging design and front-end engineering for 15+ years. I lead design across the full product lifecycle and ship alongside engineers rather than hand off to them. I've spent two decades embedded in Louisville's design and technology communities as a volunteer, mentoring and educating those wanting to learn. The rest of my time goes to my wife, daughter, my extended family and a small zoo of pets, Batman, Stephen King, and a fondness for murderous clowns apparently.</p>
-
-        <p>
-            <button type="button" class="btn proj-nav-lnk active" data-group="outer" data-target="port-cont">Portfolio</button>
-            <button type="button" class="btn proj-nav-lnk" data-group="outer" data-target="about-cont">About</button>
-            <button type="button" class="btn proj-nav-lnk" data-group="outer" data-target="resume-cont">Resume</button>
-        </p>
-
-    </div>
-
-    <div class="contact-photo">
-
-        <img src="assets/dchansen3_sq_400x400.jpg" alt="Headshot of Don Hansen" class="contact-headshot" width="400" height="400">
-
     </div>
 
     </section>
@@ -81,7 +81,7 @@
 
 <main id="main-content">
 
-<div id="port-cont" style="display: block;" class="tabcontent2">
+<div id="port-cont" role="tabpanel" aria-labelledby="tab-port-cont" style="display: block;" class="tabcontent2">
 
     <section class="cont">
 
@@ -89,18 +89,18 @@
 
     </section>
 
-    <section class="proj-nav cont">
-        <button type="button" class="btn proj-nav-lnk active" data-group="inner" data-target="codeyou">Code:You</button>
-        <button type="button" class="btn proj-nav-lnk" data-group="inner" data-target="red">Real Estate Distilled</button>
-        <button type="button" class="btn proj-nav-lnk" data-group="inner" data-target="globallou">Global Louisville</button>
-        <button type="button" class="btn proj-nav-lnk" data-group="inner" data-target="fuzzygolf">Fuzzy Zoeller Golf</button>
-        <button type="button" class="btn proj-nav-lnk" data-group="inner" data-target="naturalgrip">The Natural Grip</button>
-        <button type="button" class="btn proj-nav-lnk" data-group="inner" data-target="morework">More Work</button>
+    <section class="proj-nav cont" role="tablist" aria-label="Projects">
+        <button type="button" role="tab" id="tab-codeyou" aria-controls="codeyou" aria-selected="true" class="btn proj-nav-lnk active" data-group="inner" data-target="codeyou">Code:You</button>
+        <button type="button" role="tab" id="tab-red" aria-controls="red" aria-selected="false" tabindex="-1" class="btn proj-nav-lnk" data-group="inner" data-target="red">Real Estate Distilled</button>
+        <button type="button" role="tab" id="tab-globallou" aria-controls="globallou" aria-selected="false" tabindex="-1" class="btn proj-nav-lnk" data-group="inner" data-target="globallou">Global Louisville</button>
+        <button type="button" role="tab" id="tab-fuzzygolf" aria-controls="fuzzygolf" aria-selected="false" tabindex="-1" class="btn proj-nav-lnk" data-group="inner" data-target="fuzzygolf">Fuzzy Zoeller Golf</button>
+        <button type="button" role="tab" id="tab-naturalgrip" aria-controls="naturalgrip" aria-selected="false" tabindex="-1" class="btn proj-nav-lnk" data-group="inner" data-target="naturalgrip">The Natural Grip</button>
+        <button type="button" role="tab" id="tab-morework" aria-controls="morework" aria-selected="false" tabindex="-1" class="btn proj-nav-lnk" data-group="inner" data-target="morework">More Work</button>
     </section>
 
     <section class="proj-item cont">
 
-    <div id="codeyou" style="display: block;" class="tabcontent">
+    <div id="codeyou" role="tabpanel" aria-labelledby="tab-codeyou" style="display: block;" class="tabcontent">
 
         <div class="tab-txt">
 
@@ -144,21 +144,45 @@
 
         <div class="tab-img">
 
-            <img src="assets/codeyou-main.jpg" alt="Code:You primary logo lockup" class="proj-img">
-            <img src="assets/codeyou-logo-cy-mark.jpg" alt="The C:Y mark — sideways face with smile, eyes, and punk hair" class="proj-img">
-            <img src="assets/codeyou-logo-family-01.jpg" alt="Logo family — Code:You, Code Louisville, and Code Kentucky side by side" class="proj-img">
-            <img src="assets/codeyou-logo-family-02.jpg" alt="Logo family — Code:You, Code Louisville, and Code Kentucky side by side" class="proj-img">
-            <img src="assets/codeyou-brandguide-01.jpg" alt="Brand guide spread" class="proj-img">
-            <img src="assets/codeyou-brandguide-02.jpg" alt="Brand guide spread" class="proj-img">
-            <img src="assets/codeyou-website-home.jpg" alt="code-you.org homepage" class="proj-img">
-            <img src="assets/codeyou-marketing.jpg" alt="Marketing and social media samples" class="proj-img">
+            <figure>
+                <img src="assets/codeyou-main.jpg" alt="Code:You primary logo lockup" class="proj-img">
+                <figcaption>Primary Logo Lockup</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/codeyou-logo-cy-mark.jpg" alt="The C:Y mark — sideways face with smile, eyes, and punk hair" class="proj-img" loading="lazy">
+                <figcaption>The C:Y Mark — A Friendly Face Hidden In Plain Sight</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/codeyou-logo-family-01.jpg" alt="Logo family — Code:You, Code Louisville, and Code Kentucky side by side" class="proj-img" loading="lazy">
+                <figcaption>Logo Family</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/codeyou-logo-family-02.jpg" alt="Logo family — Code:You, Code Louisville, and Code Kentucky side by side" class="proj-img" loading="lazy">
+                <figcaption>Logo Family (continued)</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/codeyou-brandguide-01.jpg" alt="Brand guide spread" class="proj-img" loading="lazy">
+                <figcaption>Brand Guide</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/codeyou-brandguide-02.jpg" alt="Brand guide spread" class="proj-img" loading="lazy">
+                <figcaption>Brand Guide (continued)</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/codeyou-website-home.jpg" alt="code-you.org homepage" class="proj-img" loading="lazy">
+                <figcaption>code-you.org Homepage</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/codeyou-marketing.jpg" alt="Marketing and social media samples" class="proj-img" loading="lazy">
+                <figcaption>Marketing &amp; Social Media</figcaption>
+            </figure>
 
         </div>
 
     </div>
 
 
-    <div id="red" style="display: none;" class="tabcontent">
+    <div id="red" role="tabpanel" aria-labelledby="tab-red" style="display: none;" class="tabcontent">
 
         <div class="tab-txt">
 
@@ -185,18 +209,32 @@
 
         <div class="tab-img">
 
-            <img src="assets/redc-main.jpg" alt="Real Estate Distilled — primary brand identity" class="proj-img" loading="lazy">
-            <img src="assets/redc-logo-variations.jpg" alt="Real Estate Distilled logo variations" class="proj-img" loading="lazy">
-            <img src="assets/redc-brandguide-01.jpg" alt="Real Estate Distilled brand guide spread" class="proj-img" loading="lazy">
-            <img src="assets/redc-brandguide-02.jpg" alt="Real Estate Distilled brand guide spread" class="proj-img" loading="lazy">
+            <figure>
+                <img src="assets/redc-main.jpg" alt="Real Estate Distilled — primary brand identity" class="proj-img" loading="lazy">
+                <figcaption>Brand Book: Business Card Mockup</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/redc-logo-variations.jpg" alt="Real Estate Distilled logo variations" class="proj-img" loading="lazy">
+                <figcaption>Brand Book: Logo Variations</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/redc-brandguide-01.jpg" alt="Real Estate Distilled brand guide spread" class="proj-img" loading="lazy">
+                <figcaption>Brand Book: Collage</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/redc-brandguide-02.jpg" alt="Real Estate Distilled brand guide spread" class="proj-img" loading="lazy">
+                <figcaption>Brand Book: Inside Page</figcaption>
+            </figure>
+            <figure>
             <img src="assets/redc-icons.jpg" alt="Real Estate Distilled icon set" class="proj-img" loading="lazy">
-
+                <figcaption>Brand Book: Icons and Useage</figcaption>
+            </figure>
         </div>
 
     </div>
 
 
-    <div id="globallou" style="display: none;" class="tabcontent">
+    <div id="globallou" role="tabpanel" aria-labelledby="tab-globallou" style="display: none;" class="tabcontent">
 
     <div class="tab-txt">
 
@@ -226,19 +264,33 @@
 
     <div class="tab-img">
 
-        <img src="assets/globallou-cover-photo.jpg" alt="Global Louisville Action Plan booklet cover" class="proj-img" loading="lazy">
-        <img src="assets/globallou-inside-photo.jpg" alt="Global Louisville Action Plan interior spread with infographics" class="proj-img" loading="lazy">
-        <img src="assets/globallou-announce-photo.jpg" alt="Greater Louisville Inc. President Kent Oyler, center, helped unveil the Global Action Plan" class="proj-img" loading="lazy">
-        <p class="proj-caption">Greater Louisville leaders holding copies of the booklet during the press announcement.</p>
-        <img src="assets/globallou-cover1-photo.jpg" alt="Global Louisville booklet alternate cover" class="proj-img" loading="lazy">
-        <img src="assets/globallou-inside1-photo.jpg" alt="Global Louisville booklet interior page" class="proj-img" loading="lazy">
+        <figure>
+            <img src="assets/globallou-cover-photo.jpg" alt="Global Louisville Action Plan booklet cover" class="proj-img" loading="lazy">
+            <figcaption>Booklet Cover</figcaption>
+        </figure>
+        <figure>
+            <img src="assets/globallou-inside-photo.jpg" alt="Global Louisville Action Plan interior spread with infographics" class="proj-img" loading="lazy">
+            <figcaption>Interior Spread With Infographics</figcaption>
+        </figure>
+        <figure>
+            <img src="assets/globallou-announce-photo.jpg" alt="Greater Louisville Inc. President Kent Oyler, center, helped unveil the Global Action Plan" class="proj-img" loading="lazy">
+            <figcaption>Greater Louisville leaders holding copies of the booklet during the press announcement.</figcaption>
+        </figure>
+        <figure>
+            <img src="assets/globallou-cover1-photo.jpg" alt="Global Louisville booklet alternate cover" class="proj-img" loading="lazy">
+            <figcaption>Alternate Cover</figcaption>
+        </figure>
+        <figure>
+            <img src="assets/globallou-inside1-photo.jpg" alt="Global Louisville booklet interior page" class="proj-img" loading="lazy">
+            <figcaption>Interior Page</figcaption>
+        </figure>
 
     </div>
 
     </div>
 
 
-    <div id="fuzzygolf" style="display: none;" class="tabcontent">
+    <div id="fuzzygolf" role="tabpanel" aria-labelledby="tab-fuzzygolf" style="display: none;" class="tabcontent">
 
     <div class="tab-txt">
 
@@ -276,17 +328,32 @@
 
     <div class="tab-img">
 
-        <img src="assets/fuzzygolf-before.jpg" alt="The previous Fuzzy Zoeller Golf site — tables-based, non-responsive, with both courses crowded onto every page" class="proj-img" loading="lazy">
-        <img src="assets/fuzzygolf-main.jpg" alt="Fuzzy Zoeller Golf — redesigned site hero" class="proj-img" loading="lazy">
-        <img src="assets/fuzzygolf-cp-home.jpg" alt="Champions Pointe golf course homepage" class="proj-img" loading="lazy">
-        <img src="assets/fuzzygolf-cb-home.jpg" alt="Covered Bridge golf course homepage" class="proj-img" loading="lazy">
-        <img src="assets/fuzzygolf-about.jpg" alt="Fuzzy Zoeller Golf about page" class="proj-img" loading="lazy">
+        <figure>
+            <img src="assets/fuzzygolf-before.jpg" alt="The previous Fuzzy Zoeller Golf site — tables-based, non-responsive, with both courses crowded onto every page" class="proj-img" loading="lazy">
+            <figcaption>Before — Tables-Based, Non-Responsive</figcaption>
+        </figure>
+        <figure>
+            <img src="assets/fuzzygolf-main.jpg" alt="Fuzzy Zoeller Golf — redesigned site hero" class="proj-img" loading="lazy">
+            <figcaption>Redesigned Site Hero</figcaption>
+        </figure>
+        <figure>
+            <img src="assets/fuzzygolf-cp-home.jpg" alt="Champions Pointe golf course homepage" class="proj-img" loading="lazy">
+            <figcaption>Champions Pointe Homepage</figcaption>
+        </figure>
+        <figure>
+            <img src="assets/fuzzygolf-cb-home.jpg" alt="Covered Bridge golf course homepage" class="proj-img" loading="lazy">
+            <figcaption>Covered Bridge Homepage</figcaption>
+        </figure>
+        <figure>
+            <img src="assets/fuzzygolf-about.jpg" alt="Fuzzy Zoeller Golf about page" class="proj-img" loading="lazy">
+            <figcaption>About Page</figcaption>
+        </figure>
 
     </div>
 
     </div>
 
-    <div id="naturalgrip" style="display: none;" class="tabcontent">
+    <div id="naturalgrip" role="tabpanel" aria-labelledby="tab-naturalgrip" style="display: none;" class="tabcontent">
 
         <div class="tab-txt">
 
@@ -337,17 +404,29 @@
 
         <div class="tab-img">
 
-            <img src="assets/tng-main.jpg" alt="The Natural Grip — Shark Tank launch landing page" class="proj-img" loading="lazy">
-            <img src="assets/tng-wireframes.jpg" alt="The Natural Grip site wireframes" class="proj-img" loading="lazy">
-            <img src="assets/tng-grip-hands.jpg" alt="Custom illustration of hands using The Natural Grip" class="proj-img" loading="lazy">
-            <img src="assets/tng-desktop.jpg" alt="The Natural Grip desktop site" class="proj-img" loading="lazy">
+            <figure>
+                <img src="assets/tng-main.jpg" alt="The Natural Grip — Shark Tank launch landing page" class="proj-img" loading="lazy">
+                <figcaption>Shark Tank Launch Landing Page</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/tng-wireframes.jpg" alt="The Natural Grip site wireframes" class="proj-img" loading="lazy">
+                <figcaption>Site Wireframes</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/tng-grip-hands.jpg" alt="Custom illustration of hands using The Natural Grip" class="proj-img" loading="lazy">
+                <figcaption>Custom Illustration</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/tng-desktop.jpg" alt="The Natural Grip desktop site" class="proj-img" loading="lazy">
+                <figcaption>Desktop Site</figcaption>
+            </figure>
 
         </div>
 
     </div>
 
 
-    <div id="morework" style="display: none;" class="tabcontent">
+    <div id="morework" role="tabpanel" aria-labelledby="tab-morework" style="display: none;" class="tabcontent">
 
     <div class="tab-txt">
 
@@ -441,7 +520,7 @@
 
 <!-- BEGIN ABOUT SECTION -->
 
-<div id="about-cont" style="display: none;" class="tabcontent2">
+<div id="about-cont" role="tabpanel" aria-labelledby="tab-about-cont" style="display: none;" class="tabcontent2">
 
     <section class="cont">
 
@@ -457,7 +536,10 @@
 
             <p>In 1999 I moved to Louisville, and fell in love with the city. Over the years I have been involved in the design and technology communities in Louisville. At AIGA Louisville I was a founding member and held several roles here over the years including:  Director of Technology, Vice President, and ultimately Chapter President. One of my proudest moments is helping with the first Design Week Louisville in 2015, where we had top designers from all over come and speak to the area’s design community. The keynote was Stefan Sagmeister and I was privileged enough to be able to pick him up from the airport, he asked to drive around the city so we went spent about an hour driving around checking out various parts of the city, and when we got to the west end, he seemed to be in awe with the ornateness of the houses, commenting on several of the large beautiful windows in the houses. Design Week was really successful for the community that year and continued on annually for several years.</p>
 
-            <img src="assets/about-designweek.jpg" alt="The Natural Grip — Shark Tank launch landing page" class="proj-img" loading="lazy">
+            <figure>
+                <img src="assets/about-designweek.jpg" alt="Design Week Louisville event" class="proj-img" loading="lazy">
+                <figcaption>Design Week Louisville, 2015</figcaption>
+            </figure>
 
             <p>2015 was a really busy year as I also became a mentor at Code Louisville. Helping teach concepts and demonstrating how to code in one of the first front-end classes, with on average 30 students a week, in person. With Code Louisville over the years, I helped hundreds of adults learn a new career path in tech or development. Growing up in rural Indiana, I was lucky to have a father that loved technology so I had access that a lot did not have. It has been a passion of mine to help make sure that everyone has access to technology, not just as a mentor, but also through accessible design. The theme of my work and career is this: Help people make great things, by giving them the tools and knowledge to create them.</p>
 
@@ -465,7 +547,19 @@
 
             <p>In my free time I enjoy being a collector of all things Batman with opinions on which Batman is the best overall (it's complicated). My collection contains all things from comics to action figures and everything in between. Books are a passion. I have a small library of comics, graphic novels, design, programming, scifi, horror and thriller books. A constant reader of Stephen King I also try to collect his first editions, the best so far being a first edition of IT my wife procured for me.</p>
 
-            <img src="assets/about-batfam.jpg" alt="The Natural Grip — Shark Tank launch landing page" class="proj-img" loading="lazy">
+            <figure>
+                <img src="assets/about-batfam.jpg" alt="Don's Batman collection and family memorabilia" class="proj-img" loading="lazy">
+                <figcaption>A Slice of the Bat-Collection</figcaption>
+            </figure>
+
+            <div class="mason-cont">
+
+                <img class="proj-more-img" src="assets/about-dctony.jpg" alt="Don with his Batman collection" loading="lazy">
+                <img class="proj-more-img" src="assets/about-ace.jpg" alt="Ace, the family German shepherd" loading="lazy">
+                <img class="proj-more-img" src="assets/about-kids.jpg" alt="Don with his daughter Kaylee" loading="lazy">
+
+
+            </div>
 
 
         </div>
@@ -478,7 +572,7 @@
 
 <!-- BEGIN RESUME SECTION -->
 
-<div id="resume-cont" style="display: none;" class="tabcontent2">
+<div id="resume-cont" role="tabpanel" aria-labelledby="tab-resume-cont" style="display: none;" class="tabcontent2">
 
 
     <section class="cont">
@@ -822,11 +916,10 @@
 
         var navs = document.querySelectorAll('.proj-nav-lnk[data-group="' + group + '"]');
         for (var j = 0; j < navs.length; j++) {
-            if (navs[j].getAttribute("data-target") === targetId) {
-                navs[j].classList.add("active");
-            } else {
-                navs[j].classList.remove("active");
-            }
+            var isActive = navs[j].getAttribute("data-target") === targetId;
+            navs[j].classList.toggle("active", isActive);
+            navs[j].setAttribute("aria-selected", isActive ? "true" : "false");
+            navs[j].setAttribute("tabindex", isActive ? "0" : "-1");
         }
     }
 
@@ -834,6 +927,27 @@
         var btn = evt.target.closest(".proj-nav-lnk[data-target]");
         if (!btn) { return; }
         switchTab(btn.getAttribute("data-group"), btn.getAttribute("data-target"));
+    });
+
+    // Arrow-key navigation within each tablist (WAI-ARIA tabs pattern).
+    document.addEventListener("keydown", function(evt) {
+        var btn = evt.target.closest('.proj-nav-lnk[role="tab"]');
+        if (!btn) { return; }
+        var key = evt.key;
+        if (key !== "ArrowRight" && key !== "ArrowLeft" && key !== "Home" && key !== "End") { return; }
+        evt.preventDefault();
+
+        var group = btn.getAttribute("data-group");
+        var navs = document.querySelectorAll('.proj-nav-lnk[data-group="' + group + '"]');
+        var idx = Array.prototype.indexOf.call(navs, btn);
+        var next;
+        if (key === "ArrowRight") { next = (idx + 1) % navs.length; }
+        else if (key === "ArrowLeft") { next = (idx - 1 + navs.length) % navs.length; }
+        else if (key === "Home") { next = 0; }
+        else { next = navs.length - 1; }
+
+        switchTab(group, navs[next].getAttribute("data-target"));
+        navs[next].focus();
     });
 
     // ─────────────────────────────────────────────────────────────────────────
