@@ -1,22 +1,31 @@
 :root {
-    --color-red: #ff3627;          /* primary accent */
-    --color-red-hover: #e92c1e;
-    --color-red-dark: #d31717;
-    --color-red-darker: #b51717;
-    --color-ink: #1d1d1d;
-    --color-ink-soft: #131313;
-    --color-jet: #363636;
-    --color-gray: #9e9e9e;
-    --color-gray-text: #717171;
-    --color-rule: #dcdcdc;
-    --color-rule-soft: #ececec;
-    --color-bg-soft: #efefef;
-    --color-white: #ffffff;
+    /* Accent — true warm orange (less yellow) */
+    --color-red: #d96e2e;          /* primary accent (orange) */
+    --color-red-hover: #e88040;
+    --color-red-dark: #b85a23;
+    --color-red-darker: #94481b;
+
+    /* Surfaces */
+    --color-bg: #fbfaf7;            /* main content bg — light warm off-white */
+    --color-bg-soft: #152238;       /* dark chrome — header / pre-footer / footer */
+    --color-jet: #1e2d44;           /* elevated dark blocks — inverted cards, chips */
+    --color-rule: #e1ddd5;          /* visible borders on light bg */
+    --color-rule-soft: #ecebe6;     /* subtle borders on light bg */
+    --color-on-dark: #e8ecf1;       /* text on dark surfaces */
+    --color-on-dark-soft: #c5cdd9;  /* muted text on dark surfaces */
+
+    /* Foreground — dark text on light bg */
+    --color-ink: #1d1d1d;           /* primary text */
+    --color-ink-soft: #131313;      /* strong / headings */
+    --color-gray-text: #6b7280;     /* secondary / meta */
+    --color-gray: #9ca3af;          /* decorative strokes */
+
+    --color-white: #ffffff;         /* text on accent backgrounds */
 
     --font-display: 'Oswald', sans-serif;
     --font-body: 'Quattrocento', serif;
 
-    --shadow-btn: 0 2px 4px 0 rgba(0,0,0,0.35);
+    --shadow-btn: 0 2px 6px 0 rgba(0,0,0,0.5);
     --transition-btn: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
@@ -34,7 +43,8 @@ html {
 }
 
 body {
-    background: var(--color-white);
+    background: var(--color-bg);
+    color: var(--color-ink);
 }
 
 h1 {
@@ -109,6 +119,7 @@ a:active {
 
 .cont {
     display: flex;
+    flex-direction: column;
     width: 100%;
     max-width: 1000px;
     margin: 1rem auto;
@@ -133,15 +144,21 @@ a:active {
 }
 
 .footer {
-    background: var(--color-rule);
+    background: var(--color-bg-soft);
+    color: var(--color-on-dark);
     padding: 2rem 0;
+}
+
+.header,
+.pre-footer {
+    color: var(--color-on-dark);
 }
 
 
 /* CONTACT / HEADER */
 
 .contact-cont {
-    color: var(--color-ink);
+    color: var(--color-on-dark);
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column-reverse;
@@ -200,7 +217,7 @@ a:active {
     list-style: none;
     margin: 1rem 0;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 }
 
@@ -217,7 +234,7 @@ a:active {
 }
 
 .social-icons i {
-    color: var(--color-ink);
+    color: var(--color-on-dark);
 }
 
 .social-icons a {
@@ -279,6 +296,10 @@ a:active {
     margin: 1rem 0;
 }
 
+.header .btn {
+    color: var(--color-on-dark);
+}
+
 .proj-nav-lnk.active {
     background: var(--color-red);
     color: var(--color-white);
@@ -287,7 +308,7 @@ a:active {
 }
 
 
-/* PORTFOLIO / PROJECT TABS */
+/* TABS */
 
 .tabcontent {
     width: 100%;
@@ -325,6 +346,31 @@ h2.proj-header {
     width: 100%;
     max-width: 1000px;
     margin: 1rem auto;
+}
+
+.tab-img figure {
+    width: 100%;
+    max-width: 1000px;
+    margin: 1rem auto 2rem;
+    text-align: center;
+}
+
+.tab-img figure .proj-img {
+    margin: 0 auto 0.5rem;
+    display: block;
+}
+
+.tab-img figcaption {
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 200;
+    color: var(--color-ink);
+    opacity: 0.75;
+    text-align: center;
+    line-height: 1.4;
+    padding: 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: .08ch;
 }
 
 .proj-caption {
@@ -426,7 +472,7 @@ ul.workbrands-list li {
     background: var(--color-jet);
     margin: 0.3rem;
     font-size: 0.65rem;
-    color: var(--color-bg-soft);
+    color: var(--color-on-dark);
     padding: 0.4rem 0.8rem;
     word-wrap: normal;
     text-align: center;
@@ -481,8 +527,8 @@ ul.resume-list {
 }
 
 .resume-item.inverted {
-    background: #333;
-    color: var(--color-white);
+    background: var(--color-jet);
+    color: var(--color-on-dark);
     padding: 2rem;
     margin-bottom: 2rem;
 }
