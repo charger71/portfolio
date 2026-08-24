@@ -133,7 +133,6 @@ a:active {
 
 .header {
     background: var(--color-bg-soft);
-    margin-bottom: 2rem;
     padding: 2rem 0 3rem;
 }
 
@@ -241,11 +240,12 @@ a:active {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid var(--color-red);
+    border: none;
     margin-right: 1rem;
     padding: 0.5rem;
     min-width: 46px;
     transition: var(--transition-btn);
+    border-radius: 6px;
 }
 
 .social-icons a:hover {
@@ -296,8 +296,45 @@ a:active {
     margin: 1rem 0;
 }
 
-.header .btn {
+/* MENUBAR — sticky primary navigation (inverted: orange bg, midnight accents) */
+
+.menubar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-red);
+    padding: 0.5rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.menubar .outer-tablist {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.menubar .btn {
+    background: transparent;
+    border-color: var(--color-bg-soft);
+    color: var(--color-bg-soft);
+    margin: 0.25rem 0;
+    min-width: 120px;
+    border-radius: 6px;
+}
+
+.menubar .btn:not(.active):hover {
+    background: var(--color-bg-soft);
     color: var(--color-on-dark);
+    border-color: var(--color-bg-soft);
+}
+
+.menubar .btn.active {
+    background: var(--color-bg-soft);
+    color: var(--color-on-dark);
+    border-color: var(--color-bg-soft);
 }
 
 .proj-nav-lnk.active {
@@ -307,6 +344,39 @@ a:active {
     box-shadow: var(--shadow-btn);
 }
 
+
+/* MOBILE HAMBURGER + DRAWER (phones, < 768px) */
+
+.nav-toggle {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 200;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--color-red);
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+    transition: background 0.2s ease;
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus {
+    background: var(--color-red-hover);
+}
+
+.nav-toggle .icon-bars { display: block; }
+.nav-toggle .icon-close { display: none; }
+body.nav-open .nav-toggle .icon-bars { display: none; }
+body.nav-open .nav-toggle .icon-close { display: block; }
 
 /* TABS */
 
@@ -335,11 +405,50 @@ h2.proj-header {
     left: 0;
 }
 
+body:not([data-outer-tab="port-cont"]) .proj-nav {
+    display: none;
+}
+
 .proj-nav {
+    position: sticky;
+    top: var(--menubar-h, 64px);
+    z-index: 90;
     display: flex;
-    justify-content: space-between;
-    align-content: center;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--color-bg);
+    padding: 0.5rem 2rem;
+    margin: 0 auto 1.5rem;
+    /* Full-width strip that extends beyond the .cont 1000px cap; recolors when stuck. */
+    box-shadow: 0 0 0 100vmax var(--color-bg);
+    clip-path: inset(0 -100vmax);
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.proj-nav.is-stuck {
+    background: var(--color-bg-soft);
+    box-shadow: 0 0 0 100vmax var(--color-bg-soft);
+}
+
+.proj-nav .btn {
+    color: var(--color-ink);
+    margin: 0.25rem 0;
+    min-width: 120px;
+    border-radius: 6px;
+    transition: color 0.2s ease;
+}
+
+.proj-nav.is-stuck .btn:not(.active) {
+    color: var(--color-on-dark);
+}
+
+.proj-nav .btn:not(.active):hover {
+    background: var(--color-red);
+    color: var(--color-white);
+    border-color: var(--color-red);
 }
 
 .proj-img {
@@ -360,22 +469,17 @@ h2.proj-header {
     display: block;
 }
 
-.tab-img figcaption {
+figcaption {
     font-family: var(--font-display);
     font-size: 0.875rem;
     font-weight: 200;
-    color: var(--color-ink);
+    color: inherit;
     opacity: 0.75;
     text-align: center;
     line-height: 1.4;
-    padding: 0 1rem;
+    padding: 0.5rem 1rem 0;
     text-transform: uppercase;
     letter-spacing: .08ch;
-}
-
-.proj-caption {
-    font-size: 0.75rem;
-    font-style: italic;
 }
 
 .tab-txt {
@@ -396,22 +500,22 @@ h2.proj-header {
     margin: 0;
 }
 
-.tab-txt > div:nth-child(2n) a {
-    color: var(--color-white);
-    border-bottom-color: rgba(255,255,255,0.4);
-}
-
-.tab-txt > div:nth-child(2n) a:hover {
-    color: var(--color-white);
-    border-bottom-color: var(--color-white);
-}
-
 .proj-aside {
     margin: 0;
     padding: 1rem;
     background: var(--color-red);
     color: var(--color-white);
     width: 100%;
+}
+
+.proj-aside a {
+    color: var(--color-bg-soft);
+    border-bottom-color: rgba(21, 34, 56, 0.35);
+}
+
+.proj-aside a:hover {
+    color: var(--color-bg);
+    border-bottom-color: var(--color-bg-soft);
 }
 
 .proj-aside p {
@@ -630,10 +734,6 @@ hr.divider {
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
 
-    .proj-nav {
-        flex-direction: row;
-    }
-
     .tab-txt {
         flex-direction: row;
     }
@@ -645,6 +745,103 @@ hr.divider {
 
 
 /* Print */
+
+/* .drawer wraps menubar + proj-nav. On desktop it is invisible to layout
+   (display: contents) so the existing sticky behavior of its children
+   continues to work relative to <body>. On phones it becomes a full-height
+   slide-in panel that contains both navs. */
+
+.drawer { display: contents; }
+
+
+/* MOBILE HAMBURGER DRAWER (phones only, < 768px). Placed last so it always
+   overrides the desktop .menubar / .proj-nav rules earlier in the cascade. */
+
+@media (max-width: 767px) {
+
+    .nav-toggle { display: flex; }
+
+    .drawer {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80vw;
+        max-width: 320px;
+        height: 100vh;
+        background: var(--color-bg-soft);
+        z-index: 150;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        box-shadow: 4px 0 20px rgba(0,0,0,0.35);
+    }
+
+    body.nav-open .drawer { transform: translateX(0); }
+
+    /* Inside the drawer the children are flow items, not sticky bars. */
+    .menubar,
+    .proj-nav {
+        position: static;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        clip-path: none;
+        box-shadow: none;
+    }
+
+    .menubar {
+        padding: 5rem 1.5rem 1rem;
+    }
+
+    .menubar .outer-tablist {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+        max-width: none;
+    }
+
+    .menubar .btn,
+    .proj-nav .btn {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+    }
+
+    /* proj-nav fills remaining vertical space below the menubar, scrollable
+       if the project list is long. */
+    .proj-nav {
+        flex: 1 1 auto;
+        padding: 1rem 1.5rem 1.5rem;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+        background: var(--color-bg-soft);
+        overflow-y: auto;
+    }
+
+    .proj-nav .btn:not(.active) { color: var(--color-on-dark); }
+
+    /* Cancel the desktop is-stuck full-viewport shadow inside the drawer. */
+    .proj-nav.is-stuck {
+        box-shadow: none;
+        clip-path: none;
+    }
+
+    /* Backdrop dims the page behind the open drawer. */
+    body.nav-open::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 140;
+    }
+
+    body.nav-open {
+        overflow: hidden;
+    }
+}
+
 
 @media print {
     body {

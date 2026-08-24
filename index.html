@@ -27,9 +27,14 @@
 
 </head>
 
-<body>
+<body data-outer-tab="port-cont">
 
     <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <button type="button" class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+        <i class="fa fa-bars icon-bars" aria-hidden="true"></i>
+        <i class="fa fa-times icon-close" aria-hidden="true"></i>
+    </button>
 
     <div class="full-width-cont header">
 
@@ -46,17 +51,11 @@
 
         <p>I'm a Product Designer who's been bridging design and front-end engineering for 20+ years. I have led design and development across the full product lifecycle and ship alongside engineers rather than hand off to them. I've spent two decades embedded in Louisville's design and technology communities as a volunteer, mentoring and educating those wanting to learn. The rest of my time goes to my wife, daughter, my extended family and a small zoo of pets, Batman, Stephen King, and a fondness for murderous clowns apparently.</p>
 
-        <div role="tablist" aria-label="Site sections" class="outer-tablist">
-            <button type="button" role="tab" id="tab-port-cont" aria-controls="port-cont" aria-selected="true" class="btn proj-nav-lnk active" data-group="outer" data-target="port-cont">Portfolio</button>
-            <button type="button" role="tab" id="tab-about-cont" aria-controls="about-cont" aria-selected="false" tabindex="-1" class="btn proj-nav-lnk" data-group="outer" data-target="about-cont">About</button>
-            <button type="button" role="tab" id="tab-resume-cont" aria-controls="resume-cont" aria-selected="false" tabindex="-1" class="btn proj-nav-lnk" data-group="outer" data-target="resume-cont">Resume</button>
-        </div>
-
     </div>
 
     <div class="contact-photo">
 
-        <img src="assets/dchansen-color.jpg" alt="Headshot of Don Hansen" class="contact-headshot" width="400" height="400">
+        <img src="assets/donh-headshot.png" alt="Headshot of Don Hansen" class="contact-headshot" width="400" height="400">
 
                 <div class="social-cont">
 
@@ -77,6 +76,29 @@
 
     </div>
 
+<div class="drawer">
+
+<header class="menubar">
+
+    <div role="tablist" aria-label="Site sections" class="outer-tablist">
+        <button type="button" role="tab" id="tab-port-cont" aria-controls="port-cont" aria-selected="true" class="btn proj-nav-lnk active" data-group="outer" data-target="port-cont">Projects</button>
+        <button type="button" role="tab" id="tab-about-cont" aria-controls="about-cont" aria-selected="false" tabindex="-1" class="btn proj-nav-lnk" data-group="outer" data-target="about-cont">About</button>
+        <button type="button" role="tab" id="tab-resume-cont" aria-controls="resume-cont" aria-selected="false" tabindex="-1" class="btn proj-nav-lnk" data-group="outer" data-target="resume-cont">Resume</button>
+    </div>
+
+</header>
+
+<section class="proj-nav cont" role="tablist" aria-label="Projects">
+    <button type="button" role="tab" id="tab-codeyou" aria-controls="codeyou" aria-selected="true" class="btn proj-nav-lnk active" data-group="inner" data-target="codeyou">Code:You</button>
+    <button type="button" role="tab" id="tab-red" aria-controls="red" aria-selected="false" tabindex="-1" class="btn proj-nav-lnk" data-group="inner" data-target="red">Real Estate Distilled</button>
+    <button type="button" role="tab" id="tab-globallou" aria-controls="globallou" aria-selected="false" tabindex="-1" class="btn proj-nav-lnk" data-group="inner" data-target="globallou">Global Louisville</button>
+    <button type="button" role="tab" id="tab-fuzzygolf" aria-controls="fuzzygolf" aria-selected="false" tabindex="-1" class="btn proj-nav-lnk" data-group="inner" data-target="fuzzygolf">Fuzzy Zoeller Golf</button>
+    <button type="button" role="tab" id="tab-naturalgrip" aria-controls="naturalgrip" aria-selected="false" tabindex="-1" class="btn proj-nav-lnk" data-group="inner" data-target="naturalgrip">The Natural Grip</button>
+    <button type="button" role="tab" id="tab-morework" aria-controls="morework" aria-selected="false" tabindex="-1" class="btn proj-nav-lnk" data-group="inner" data-target="morework">More Work</button>
+</section>
+
+</div><!-- /.drawer -->
+
 <!-- BEGIN PORTFOLIO SECTION -->
 
 <main id="main-content">
@@ -87,15 +109,6 @@
 
         <h2 class="proj-header">Projects</h2>
 
-    </section>
-
-    <section class="proj-nav cont" role="tablist" aria-label="Projects">
-        <button type="button" role="tab" id="tab-codeyou" aria-controls="codeyou" aria-selected="true" class="btn proj-nav-lnk active" data-group="inner" data-target="codeyou">Code:You</button>
-        <button type="button" role="tab" id="tab-red" aria-controls="red" aria-selected="false" tabindex="-1" class="btn proj-nav-lnk" data-group="inner" data-target="red">Real Estate Distilled</button>
-        <button type="button" role="tab" id="tab-globallou" aria-controls="globallou" aria-selected="false" tabindex="-1" class="btn proj-nav-lnk" data-group="inner" data-target="globallou">Global Louisville</button>
-        <button type="button" role="tab" id="tab-fuzzygolf" aria-controls="fuzzygolf" aria-selected="false" tabindex="-1" class="btn proj-nav-lnk" data-group="inner" data-target="fuzzygolf">Fuzzy Zoeller Golf</button>
-        <button type="button" role="tab" id="tab-naturalgrip" aria-controls="naturalgrip" aria-selected="false" tabindex="-1" class="btn proj-nav-lnk" data-group="inner" data-target="naturalgrip">The Natural Grip</button>
-        <button type="button" role="tab" id="tab-morework" aria-controls="morework" aria-selected="false" tabindex="-1" class="btn proj-nav-lnk" data-group="inner" data-target="morework">More Work</button>
     </section>
 
     <section class="proj-item cont">
@@ -302,7 +315,7 @@
 
         <p>I rebuilt the site from the ground up on WordPress with a custom theme, designed and developed end-to-end. Each course got its own clearly separated identity within the parent brand. New interactive course maps replaced the previous static layouts. Proper booking pages were built around the actual flow a golfer needs &mdash; pick a course, pick a date, pick a time &mdash; instead of the buried multi-step process the old site demanded.</p>
 
-        <p>After launch, online tee time bookings grew substantially and overall site traffic increased significantly. The courses themselves are still operating today &mdash; now managed by <a href="https://www.kempersports.com/" target="_blank" rel="noopener noreferrer">KemperSports</a> under the combined name <a href="https://www.cbcpgolf.com" target="_blank" rel="noopener noreferrer">Covered Bridge and Champions Pointe</a>.</p>
+        <p>After launch, online tee time bookings grew substantially and overall site traffic increased significantly. The courses themselves are now managed by <a href="https://www.kempersports.com/" target="_blank" rel="noopener noreferrer">KemperSports</a> under the combined name <a href="https://www.cbcpgolf.com" target="_blank" rel="noopener noreferrer">Covered Bridge and Champions Pointe</a>.</p>
 
         </div>
 
@@ -530,7 +543,7 @@
 
     <section class="resume-cont cont">
 
-        <div class="resume-item inverted">
+        <div class="resume-item">
 
             <p class="lede">I'm a Product Designer that has been doing some version of this work for 15+ years. I design products end-to-end and have the technical fluency to ship them alongside engineers rather than hand off to them. I work across research, UX/UI, design systems, and front-end implementation, in environments ranging from solo freelance to enterprise. Volunteering and mentorship have been a big passion in my career.</p>
 
@@ -543,24 +556,18 @@
 
             <p>2015 was a really busy year as I also became a mentor at Code Louisville. Helping teach concepts and demonstrating how to code in one of the first front-end classes, with on average 30 students a week, in person. With Code Louisville over the years, I helped hundreds of adults learn a new career path in tech or development. Growing up in rural Indiana, I was lucky to have a father that loved technology so I had access that a lot did not have. It has been a passion of mine to help make sure that everyone has access to technology, not just as a mentor, but also through accessible design. The theme of my work and career is this: Help people make great things, by giving them the tools and knowledge to create them.</p>
 
-            <p>Besides being a designer, I'm a husband to an amazing wife Nicole, who along with keeping this household organized, works in banking. Dad to our awesome daughter Kaylee, who's in high school and is currently thinking about college to be a large animal vet. This will be helpful because our home is a small zoo. Our Menagerie is made up of our three cats, Ms. Kitty, Biscuit, and Roux plus our two dogs, Ace, a German shepherd named after Batman’s Bat-Hound, and Quinn, named appropriately after Harley Quinn as she is full of energy and little mischievous. Yes, Batman runs deep in this family.</p>
+            <p>Besides being a designer, I'm a husband to an amazing wife Nicole, who along with keeping this household organized, works in banking. Dad to our awesome daughter Kaylee, who's in high school and is currently thinking about college to be a large animal vet. This will be helpful because our home is a small zoo. Our menagerie is made up of our three cats, Ms. Kitty, Biscuit, and Roux plus our two dogs, Ace, a German shepherd named after Batman’s Bat-Hound, and Quinn, named appropriately after Harley Quinn as she is full of energy and little mischievous. Yes, Batman runs deep in this family.</p>
 
-            <p>In my free time I enjoy being a collector of all things Batman with opinions on which Batman is the best overall (it's complicated). My collection contains all things from comics to action figures and everything in between. Books are a passion. I have a small library of comics, graphic novels, design, programming, scifi, horror and thriller books. A constant reader of Stephen King I also try to collect his first editions, the best so far being a first edition of IT my wife procured for me.</p>
+            <p>In my free time I enjoy being a collector of all things Batman with opinions on which Batman is the best overall (it's complicated). My collection contains all things from comics to action figures and everything in between. Books are a passion. I have a small library of comics, graphic novels, design, programming, scifi, horror and thriller books. A constant reader of Stephen King I also try to collect his first editions, the best so far being a first edition of <em>IT</em> my wife procured for me.</p>
 
             <figure>
                 <img src="assets/about-batfam.jpg" alt="Don's Batman collection and family memorabilia" class="proj-img" loading="lazy">
                 <figcaption>A Slice of the Bat-Collection</figcaption>
             </figure>
 
-            <div class="mason-cont">
-
                 <img class="proj-more-img" src="assets/about-dctony.jpg" alt="Don with his Batman collection" loading="lazy">
                 <img class="proj-more-img" src="assets/about-ace.jpg" alt="Ace, the family German shepherd" loading="lazy">
                 <img class="proj-more-img" src="assets/about-kids.jpg" alt="Don with his daughter Kaylee" loading="lazy">
-
-
-            </div>
-
 
         </div>
 
@@ -763,7 +770,7 @@
             <p>As President of AIGA Louisville a 501(c)(3) organization. I oversaw the development of the Chapter and ensure Chapter activities are in alignment with the AIGA mission and local purpose statement.</p>
 
             <ul class="resume-list">
-                <li>Held multiple leadership roles over the years &mdash; Director of Technology, Vice President, and Chapter President (final two years).</li>
+                <li>Held multiple leadership roles over the years &mdash; Director of Technology, Vice President, and Chapter President.</li>
                 <li>Founding member of AIGA Louisville (formerly the LGDA &mdash; Louisville Graphic Design Association).</li>
                 <li>Helped create, plan and execute various types of events for the local community.</li>
                 <li>Brought in national design leaders to talk, mentor and educate our local community.</li>
@@ -914,6 +921,10 @@
         var target = document.getElementById(targetId);
         if (target) { target.style.display = "block"; }
 
+        if (group === "outer") {
+            document.body.setAttribute("data-outer-tab", targetId);
+        }
+
         var navs = document.querySelectorAll('.proj-nav-lnk[data-group="' + group + '"]');
         for (var j = 0; j < navs.length; j++) {
             var isActive = navs[j].getAttribute("data-target") === targetId;
@@ -923,10 +934,38 @@
         }
     }
 
+    // Scroll a target element to just below the sticky nav stack (menubar + proj-nav).
+    // For outer-tab clicks, pass the panel's .proj-header so the H2 lands at the top.
+    function scrollIntoViewBelowNav(target) {
+        if (!target) { return; }
+        requestAnimationFrame(function() {
+            var menubar = document.querySelector(".menubar");
+            var projNav = document.querySelector(".proj-nav");
+            var offset = (menubar ? menubar.getBoundingClientRect().height : 0)
+                       + (projNav ? projNav.getBoundingClientRect().height : 0);
+            var y = window.pageYOffset + target.getBoundingClientRect().top - offset;
+            window.scrollTo({ top: y, behavior: "smooth" });
+        });
+    }
+
+    function scrollProjectIntoView(targetId) {
+        scrollIntoViewBelowNav(document.getElementById(targetId));
+    }
+
     document.addEventListener("click", function(evt) {
         var btn = evt.target.closest(".proj-nav-lnk[data-target]");
         if (!btn) { return; }
-        switchTab(btn.getAttribute("data-group"), btn.getAttribute("data-target"));
+        var group = btn.getAttribute("data-group");
+        var targetId = btn.getAttribute("data-target");
+        switchTab(group, targetId);
+        if (group === "inner") {
+            scrollProjectIntoView(targetId);
+        } else if (group === "outer") {
+            // Scroll to the new panel's section header (the .proj-header h2).
+            var panel = document.getElementById(targetId);
+            var header = panel ? panel.querySelector(".proj-header") : null;
+            scrollIntoViewBelowNav(header || panel);
+        }
     });
 
     // Arrow-key navigation within each tablist (WAI-ARIA tabs pattern).
@@ -946,15 +985,15 @@
         else if (key === "Home") { next = 0; }
         else { next = navs.length - 1; }
 
-        switchTab(group, navs[next].getAttribute("data-target"));
+        var nextTarget = navs[next].getAttribute("data-target");
+        switchTab(group, nextTarget);
         navs[next].focus();
+        if (group === "inner") { scrollProjectIntoView(nextTarget); }
     });
 
     // ─────────────────────────────────────────────────────────────────────────
     // URL hash routing — deep links to projects and outer tabs.
-    //   #naturalgrip → Portfolio tab + Natural Grip project
-    //   #about       → About tab
-    //   #resume      → Resume tab
+    //   #naturalgrip → Portfolio tab + NG project
     // ─────────────────────────────────────────────────────────────────────────
 
     var PROJECT_TABS = ["codeyou", "red", "globallou", "fuzzygolf", "naturalgrip", "morework"];
@@ -967,12 +1006,7 @@
         if (PROJECT_TABS.indexOf(hash) !== -1) {
             switchTab("outer", "port-cont");
             switchTab("inner", hash);
-            requestAnimationFrame(function() {
-                requestAnimationFrame(function() {
-                    var el = document.getElementById(hash);
-                    if (el) { el.scrollIntoView({ behavior: "smooth", block: "start" }); }
-                });
-            });
+            scrollProjectIntoView(hash);
         } else if (OUTER_TAB_MAP[hash]) {
             switchTab("outer", OUTER_TAB_MAP[hash]);
         }
@@ -980,6 +1014,85 @@
 
     window.addEventListener("DOMContentLoaded", routeFromHash);
     window.addEventListener("hashchange", routeFromHash);
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // Sticky offset — keep --menubar-h in sync with the rendered menubar height
+    // so .proj-nav can stick directly beneath it even when the menubar wraps.
+    // ─────────────────────────────────────────────────────────────────────────
+
+    (function() {
+        var menubar = document.querySelector(".menubar");
+        if (!menubar) { return; }
+
+        function updateMenubarHeight() {
+            var h = menubar.getBoundingClientRect().height;
+            document.documentElement.style.setProperty("--menubar-h", h + "px");
+        }
+
+        updateMenubarHeight();
+        if (typeof ResizeObserver !== "undefined") {
+            new ResizeObserver(updateMenubarHeight).observe(menubar);
+        } else {
+            window.addEventListener("resize", updateMenubarHeight);
+        }
+
+        // ─────────────────────────────────────────────────────────────────
+        // Mobile drawer (hamburger toggle, < 768px). Closes on: toggle click,
+        // ESC, backdrop click, or any nav-link click inside the drawer.
+        // ─────────────────────────────────────────────────────────────────
+        var toggle = document.querySelector(".nav-toggle");
+        function setDrawer(open) {
+            document.body.classList.toggle("nav-open", open);
+            if (toggle) { toggle.setAttribute("aria-expanded", open ? "true" : "false"); }
+        }
+        if (toggle) {
+            toggle.addEventListener("click", function() {
+                setDrawer(!document.body.classList.contains("nav-open"));
+            });
+            document.addEventListener("keydown", function(evt) {
+                if (evt.key === "Escape" && document.body.classList.contains("nav-open")) {
+                    setDrawer(false);
+                    toggle.focus();
+                }
+            });
+            // Backdrop click — the ::before pseudo-element sits behind body.nav-open.
+            // We detect it by clicking outside the drawer panels and the toggle itself.
+            document.addEventListener("click", function(evt) {
+                if (!document.body.classList.contains("nav-open")) { return; }
+                if (evt.target.closest(".drawer, .nav-toggle")) { return; }
+                setDrawer(false);
+            });
+            // Close after a nav item is chosen.
+            document.addEventListener("click", function(evt) {
+                if (!evt.target.closest(".proj-nav-lnk[data-target]")) { return; }
+                if (document.body.classList.contains("nav-open")) { setDrawer(false); }
+            });
+        }
+
+        // Toggle .is-stuck on .proj-nav once it docks under the menubar.
+        var projNav = document.querySelector(".proj-nav");
+        if (projNav) {
+            var ticking = false;
+            function checkStuck() {
+                if (window.innerWidth < 768) {
+                    projNav.classList.remove("is-stuck");
+                    ticking = false;
+                    return;
+                }
+                var menubarBottom = menubar.getBoundingClientRect().bottom;
+                var navTop = projNav.getBoundingClientRect().top;
+                projNav.classList.toggle("is-stuck", navTop <= menubarBottom + 0.5);
+                ticking = false;
+            }
+            window.addEventListener("scroll", function() {
+                if (!ticking) {
+                    requestAnimationFrame(checkStuck);
+                    ticking = true;
+                }
+            }, { passive: true });
+            checkStuck();
+        }
+    })();
 
     </script>
 
